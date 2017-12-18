@@ -2,8 +2,8 @@ package com.bootcamp.services;
 
 import com.bootcamp.commons.models.Criteria;
 import com.bootcamp.commons.models.Criterias;
-import com.bootcamp.crud.RoleCRUD;
-import com.bootcamp.entities.Role;
+import com.bootcamp.crud.PagRoleCRUD;
+import com.bootcamp.entities.PagRole;
 import org.springframework.stereotype.Component;
 
 import java.sql.SQLException;
@@ -16,31 +16,31 @@ import java.util.List;
 @Component
 public class RoleService {
 
-    public Role create(Role role) throws SQLException {
-        RoleCRUD.create(role);
+    public PagRole create(PagRole role) throws SQLException {
+        PagRoleCRUD.create(role);
         return role;
     }
 
-    public Role update(Role role) throws SQLException {
-        RoleCRUD.update(role);
+    public PagRole update(PagRole role) throws SQLException {
+        PagRoleCRUD.update(role);
         return role;
     }
 
     public Boolean delete(Integer roleId) throws SQLException {
         Criterias criterias = new Criterias();
         criterias.addCriteria(new Criteria("id", "=", roleId));
-        Role role = RoleCRUD.read(criterias).get(0);
-        return RoleCRUD.delete(role);
+        PagRole role = PagRoleCRUD.read(criterias).get(0);
+        return PagRoleCRUD.delete(role);
     }
 
-    public List<Role> read() throws SQLException {
-        return RoleCRUD.read();
+    public List<PagRole> read() throws SQLException {
+        return PagRoleCRUD.read();
     }
 
-    public Role read(int idRole) throws SQLException {
+    public PagRole read(int idPagRole) throws SQLException {
         Criterias criterias = new Criterias();
-        criterias.addCriteria(new Criteria("id", "=", idRole));
+        criterias.addCriteria(new Criteria("id", "=", idPagRole));
 
-        return RoleCRUD.read(criterias).get(0);
+        return PagRoleCRUD.read(criterias).get(0);
     }
 }

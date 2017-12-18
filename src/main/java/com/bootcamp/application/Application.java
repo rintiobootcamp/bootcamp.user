@@ -30,7 +30,7 @@ import java.util.Locale;
 @SpringBootApplication
 @Configuration
 @ComponentScan({"com.bootcamp"})
-@ImportResource({ "classpath:/spring-security.xml"})
+//@ImportResource({ "classpath:/spring-security.xml"})
 
 @PropertySources({
         @PropertySource(value = "classpath:/users.sf.properties", ignoreResourceNotFound = true),

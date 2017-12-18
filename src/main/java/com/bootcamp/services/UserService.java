@@ -3,13 +3,13 @@ package com.bootcamp.services;
 import com.bootcamp.commons.models.Criteria;
 import com.bootcamp.commons.models.Criterias;
 import com.bootcamp.commons.models.Rule;
+import com.bootcamp.commons.ws.usecases.pivotone.UserWs;
 import com.bootcamp.crud.PagUserCRUD;
-import com.bootcamp.crud.RoleCRUD;
+import com.bootcamp.crud.PagRoleCRUD;
 import com.bootcamp.crud.UserRoleCRUD;
 import com.bootcamp.entities.PagUser;
-import com.bootcamp.entities.Role;
+import com.bootcamp.entities.PagRole;
 import com.bootcamp.entities.UserRole;
-import com.bootcamp.models.UserWs;
 import org.springframework.stereotype.Component;
 
 import java.sql.SQLException;
@@ -34,14 +34,14 @@ public class UserService {
         pagUser.setEmail(userWs.getEmail());
         PagUserCRUD.create(pagUser);
 
-        for(Role role: userWs.getRoles()){
+        for(PagRole role: userWs.getPagRoles()){
             UserRole userRole = new UserRole();
             Criterias criterias = new Criterias();
             criterias.addCriteria(new Criteria("id", "=", role.getId()));
-            role = RoleCRUD.read(criterias).get(0);
+            role = PagRoleCRUD.read(criterias).get(0);
 
             if(role != null) {
-                userRole.setRole(role);
+                userRole.setPagRole(role);
                 userRole.setPagUser(pagUser);
 
                 UserRoleCRUD.create(userRole);
@@ -51,8 +51,8 @@ public class UserService {
         return userWs;
     }
 
-//    public Role update(Role role) throws SQLException {
-//        RoleCRUD.update(role);
+//    public PagRole update(PagRole role) throws SQLException {
+//        PagRoleCRUD.update(role);
 //        return role;
 //    }
 
@@ -65,8 +65,8 @@ public class UserService {
 //    public Boolean delete(Integer roleId) throws SQLException {
 //        Criterias criterias = new Criterias();
 //        criterias.addCriteria(new Criteria("id", "=", roleId));
-//        Role role = RoleCRUD.read(criterias).get(0);
-//        return RoleCRUD.delete(role);
+//        PagRole role = PagRoleCRUD.read(criterias).get(0);
+//        return PagRoleCRUD.delete(role);
 //    }
 
     public Boolean delete(Integer userId) throws SQLException {
@@ -75,16 +75,16 @@ public class UserService {
     }
 
     //get a user id and returns its roles
-    public List<Role> getUserRoles(int idUser) throws SQLException {
+    public List<PagRole> getUserRoles(int idUser) throws SQLException {
         PagUser user = read(idUser);
 
         Criterias userRolecriterias = new Criterias();
         userRolecriterias.addCriteria(new Criteria("pagUser", "=", user));
         List<UserRole> userRoles = UserRoleCRUD.read(userRolecriterias);
 
-        List<Role> roles = new ArrayList<Role>();
+        List<PagRole> roles = new ArrayList<PagRole>();
         for (int i = 0; i <userRoles.size() ; i++) {
-            roles.add(userRoles.get(i).getRole());
+            roles.add(userRoles.get(i).getPagRole());
         }
 
         return roles;
@@ -100,18 +100,17 @@ public class UserService {
 
     //return all users
     public List<PagUser> read() throws SQLException {
-
         return PagUserCRUD.read();
     }
 
 
     // add a role to a user
-    public UserRole setRoleToUser(int idUser,int idRole) throws SQLException {
+    public UserRole setRoleToUser(int idUser,int idPagRole) throws SQLException {
         PagUser pagUser = this.read(idUser);
-        Role role = roleService.read(idRole);
+        PagRole role = roleService.read(idPagRole);
 
         UserRole userRole = new UserRole();
-        userRole.setRole(role);
+        userRole.setPagRole(role);
         userRole.setPagUser(pagUser);
 
         UserRoleCRUD.create(userRole);
@@ -120,17 +119,17 @@ public class UserService {
     }
 
     //delete a role from a user
-    public boolean deleteRoleFromUser(int idUser,int idRole) throws SQLException {
+    public boolean deleteRoleFromUser(int idUser,int idPagRole) throws SQLException {
         PagUser pagUser = this.read(idUser);
-        Role role = roleService.read(idRole);
+        PagRole role = roleService.read(idPagRole);
 
 
         Criterias criterias = new Criterias();
         criterias.addCriteria(new Criteria(new Rule("pagUser", "=", pagUser),"AND"));
         criterias.addCriteria(new Criteria(new Rule("role", "=", role),null));
 
-        UserRole userRole = UserRoleCRUD.read(criterias).get(0);
-        boolean bool = UserRoleCRUD.delete(userRole);
+        UserRole userPagRole = UserRoleCRUD.read(criterias).get(0);
+        boolean bool = UserRoleCRUD.delete(userPagRole);
 
         return bool;
     }
