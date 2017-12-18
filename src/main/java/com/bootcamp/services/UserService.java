@@ -77,12 +77,13 @@ public class UserService {
     //get a user id and returns its roles
     public List<PagRole> getUserRoles(int idUser) throws SQLException {
         PagUser user = read(idUser);
-
-        Criterias userRolecriterias = new Criterias();
-        userRolecriterias.addCriteria(new Criteria("pagUser", "=", user));
-        List<UserRole> userRoles = UserRoleCRUD.read(userRolecriterias);
-
+        List<UserRole> userRoles = user.getUserRoles();
         List<PagRole> roles = new ArrayList<PagRole>();
+
+        //Criterias userRolecriterias = new Criterias();
+        //userRolecriterias.addCriteria(new Criteria("pagUser", "=", user));
+        //List<UserRole> userRoles = UserRoleCRUD.read(userRolecriterias);
+
         for (int i = 0; i <userRoles.size() ; i++) {
             roles.add(userRoles.get(i).getPagRole());
         }
@@ -132,5 +133,15 @@ public class UserService {
         boolean bool = UserRoleCRUD.delete(userPagRole);
 
         return bool;
+    }
+    
+    private UserWs buildUserWs (PagUser user, List<PagRole> roles){
+        UserWs userWs = new UserWs();
+        userWs.setNom(user.getNom());
+        userWs.setEmail(user.getEmail());
+        userWs.setUsername(user.getPassword());
+        userWs.setPassword(user.getPassword());
+        userWs.setPagRoles(roles);
+        return userWs;
     }
 }
