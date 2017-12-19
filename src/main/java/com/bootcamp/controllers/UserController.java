@@ -1,5 +1,6 @@
 package com.bootcamp.controllers;
 
+import com.bootcamp.commons.ws.usecases.pivotone.RoleWs;
 import com.bootcamp.commons.ws.usecases.pivotone.UserWs;
 import com.bootcamp.entities.PagUser;
 import com.bootcamp.entities.PagRole;
@@ -38,17 +39,32 @@ public class UserController {
     @ApiOperation(value = "Save a new user", notes = "Save a new user")
     public ResponseEntity<UserWs> create(@RequestBody @Valid UserWs userws) throws SQLException, IOException {
 
-        userService.create(userws);
-        return new ResponseEntity(userws, HttpStatus.OK);
+        HttpStatus httpStatus = null;
+
+        try {
+            userws = userService.create(userws);
+            httpStatus = HttpStatus.OK;
+        } catch (SQLException ex) {
+            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return new ResponseEntity<>(userws, httpStatus);
     }
 
     @RequestMapping(method = RequestMethod.PUT)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "update a  user", notes = "update a  user")
-    public ResponseEntity<PagUser> update(@RequestBody @Valid PagUser user) throws SQLException, IOException {
+    public ResponseEntity<UserWs> update(@RequestBody @Valid UserWs user) throws SQLException, IOException {
 
         user = userService.update(user);
-        return new ResponseEntity<PagUser>(user, HttpStatus.OK);
+        HttpStatus httpStatus = null;
+
+        try {
+            user = userService.update(user);
+            httpStatus = HttpStatus.OK;
+        } catch (SQLException ex) {
+            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return new ResponseEntity<>(user, httpStatus);
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
@@ -56,16 +72,23 @@ public class UserController {
     @ApiOperation(value = "Delete a user", notes = "Delete a user")
     public ResponseEntity<Boolean> delete(@PathVariable(name = "id") int id) throws SQLException, IOException {
 
-        Boolean status = userService.delete(id);
-        return new ResponseEntity<Boolean>(status, HttpStatus.OK);
+        Boolean status = null;
+        HttpStatus httpStatus = null;
+
+        try {
+            status = userService.delete(id);
+            httpStatus = HttpStatus.OK;
+        } catch (SQLException ex) {
+            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return new ResponseEntity<>(status, httpStatus);
     }
 
     @RequestMapping(method = RequestMethod.GET)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "List of user", notes = "List of user")
-    public ResponseEntity<List<PagUser>> read() {
-        List<PagUser> users = null;
-
+    public ResponseEntity<List<UserWs>> read() {
+        List<UserWs> users = null;
         HttpStatus httpStatus = null;
 
         try {
@@ -80,9 +103,9 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Get a user with its id", notes = "Get a user with its id")
-    public ResponseEntity<PagUser> read(@PathVariable(name = "id") int id) {
+    public ResponseEntity<UserWs> read(@PathVariable(name = "id") int id) {
 
-        PagUser user = null;
+        UserWs user = null;
         HttpStatus httpStatus = null;
 
         try {
@@ -97,26 +120,42 @@ public class UserController {
     @RequestMapping(method = RequestMethod.POST, value = "/addPagRole/{idUser}/{idRole}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "add a role to a user", notes = "add a role to a user")
-    public ResponseEntity<UserRole> setRoleToUser(@PathVariable(name = "idUser") int idUser, @PathVariable(name = "idRole") int idRole) throws SQLException, IOException {
-        UserRole userRole = userService.setRoleToUser(idUser, idRole);
+    public ResponseEntity<UserWs> setRoleToUser(@PathVariable(name = "idUser") int idUser, @PathVariable(name = "idRole") int idRole) throws SQLException, IOException {
+        UserWs user = null;
+        HttpStatus httpStatus = null;
 
-        return new ResponseEntity(userRole, HttpStatus.OK);
+        try {
+            user = userService.setRoleToUser(idUser, idRole);
+            httpStatus = HttpStatus.OK;
+        } catch (SQLException ex) {
+            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return new ResponseEntity<>(user, httpStatus);
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/deletePagRole/{idUser}/{idRole}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "delete a role from a user", notes = "delete a role from a user")
-    public ResponseEntity<Boolean> deleteRoleFromUser(@PathVariable(name = "idUser") int idUser, @PathVariable(name = "idRole") int idRole) throws SQLException, IOException {
-        boolean bool = userService.deleteRoleFromUser(idUser, idRole);
-        return new ResponseEntity(bool, HttpStatus.OK);
+    public ResponseEntity<UserWs> deleteRoleFromUser(@PathVariable(name = "idUser") int idUser, @PathVariable(name = "idRole") int idRole) throws SQLException, IOException {
+        UserWs user = null;
+        
+        HttpStatus httpStatus = null;
+
+        try {
+            user = userService.deleteRoleFromUser(idUser, idRole);
+            httpStatus = HttpStatus.OK;
+        } catch (SQLException ex) {
+            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return new ResponseEntity<>(user, httpStatus);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/roles/{idUser}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "get user's roles", notes = "get user's roles")
-    public ResponseEntity<List<PagRole>> getUserRoles(@PathVariable(name = "idUser") int idUser) {
+    public ResponseEntity<List<RoleWs>> getUserRoles(@PathVariable(name = "idUser") int idUser) {
         
-        List<PagRole> roles = null;
+        List<RoleWs> roles = null;
         
         HttpStatus httpStatus = null;
 

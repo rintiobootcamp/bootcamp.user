@@ -1,5 +1,6 @@
 package com.bootcamp.controllers;
 
+import com.bootcamp.commons.ws.usecases.pivotone.RoleWs;
 import com.bootcamp.entities.PagRole;
 import com.bootcamp.services.RoleService;
 import com.bootcamp.version.ApiVersions;
@@ -14,62 +15,101 @@ import javax.validation.Valid;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by darextossa on 12/17/17.
  */
-
 @CrossOrigin(origins = "*")
 @RestController("RoleController")
 @RequestMapping("/roles")
 @Api(value = "Role API", description = "Role API")
 public class RoleController {
+
     @Autowired
     RoleService roleService;
 
     @RequestMapping(method = RequestMethod.POST)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Save a new role", notes = "Save a new role")
-    public ResponseEntity<PagRole> create(@RequestBody @Valid PagRole role) throws SQLException, IOException {
+    public ResponseEntity<RoleWs> create(@RequestBody @Valid RoleWs role) {
 
-         role = roleService.create(role);
-        return new ResponseEntity<PagRole>(role, HttpStatus.OK);
+        HttpStatus httpStatus = null;
+
+        try {
+            role = roleService.create(role);
+            httpStatus = HttpStatus.OK;
+        } catch (SQLException ex) {
+            Logger.getLogger(RoleController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return new ResponseEntity<>(role, httpStatus);
     }
 
     @RequestMapping(method = RequestMethod.PUT)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "update a  role", notes = "update a  role")
-    public ResponseEntity<PagRole> update(@RequestBody @Valid PagRole role) throws SQLException, IOException {
+    public ResponseEntity<RoleWs> update(@RequestBody @Valid RoleWs role) {
 
-        role = roleService.update(role);
-        return new ResponseEntity<PagRole>(role, HttpStatus.OK);
+        HttpStatus httpStatus = null;
+
+        try {
+            role = roleService.update(role);
+            httpStatus = HttpStatus.OK;
+        } catch (SQLException ex) {
+            Logger.getLogger(RoleController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return new ResponseEntity<>(role, httpStatus);
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Delete a role", notes = "Delete a role")
-    public ResponseEntity<Boolean> delete(@PathVariable(name = "id") int id) throws SQLException, IOException {
+    public ResponseEntity<Boolean> delete(@PathVariable(name = "id") int id) {
 
-        Boolean status = roleService.delete(id);
-        return new ResponseEntity<Boolean>(status, HttpStatus.OK);
+        Boolean status = null;
+        HttpStatus httpStatus = null;
+
+        try {
+            status = roleService.delete(id);
+            httpStatus = HttpStatus.OK;
+        } catch (SQLException ex) {
+            Logger.getLogger(RoleController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return new ResponseEntity<>(status, httpStatus);
     }
-
 
     @RequestMapping(method = RequestMethod.GET)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "List of role", notes = "List of role")
-    public ResponseEntity<List<PagRole>> read() throws SQLException, IOException {
+    public ResponseEntity<List<RoleWs>> read() throws SQLException, IOException {
 
-        List<PagRole> roles = roleService.read();
-        return new ResponseEntity<List<PagRole>>(roles, HttpStatus.OK);
+        List<RoleWs> roles = null;
+        HttpStatus httpStatus = null;
+
+        try {
+            roles = roleService.read();
+            httpStatus = HttpStatus.OK;
+        } catch (SQLException ex) {
+            Logger.getLogger(RoleController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return new ResponseEntity<>(roles, httpStatus);
     }
 
-    @RequestMapping(method = RequestMethod.GET,value = "/{id}")
+    @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Get a role with its id", notes = "Get a role with its id")
-    public ResponseEntity<PagRole> read(@PathVariable(name = "id") int id) throws SQLException, IOException {
+    public ResponseEntity<RoleWs> read(@PathVariable(name = "id") int id) throws SQLException, IOException {
 
-        PagRole role = roleService.read(id);
-        return new ResponseEntity(role, HttpStatus.OK);
+        RoleWs role = null;
+        HttpStatus httpStatus = null;
+
+        try {
+            role = roleService.read(id);
+            httpStatus = HttpStatus.OK;
+        } catch (SQLException ex) {
+            Logger.getLogger(RoleController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return new ResponseEntity<>(role, httpStatus);
     }
 }

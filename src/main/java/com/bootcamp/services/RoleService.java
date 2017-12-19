@@ -2,11 +2,16 @@ package com.bootcamp.services;
 
 import com.bootcamp.commons.models.Criteria;
 import com.bootcamp.commons.models.Criterias;
+import com.bootcamp.commons.ws.usecases.pivotone.RoleWs;
 import com.bootcamp.crud.PagRoleCRUD;
+import com.bootcamp.crud.UserRoleCRUD;
 import com.bootcamp.entities.PagRole;
+import com.bootcamp.entities.UserRole;
+import com.bootcamp.helpers.UserHelper;
 import org.springframework.stereotype.Component;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,32 +20,45 @@ import java.util.List;
 
 @Component
 public class RoleService {
+    
+    UserHelper userHelper = new UserHelper();
 
-    public PagRole create(PagRole role) throws SQLException {
-        PagRoleCRUD.create(role);
+    public RoleWs create(RoleWs role) throws SQLException {
+        PagRole pagRole = userHelper.buildPagRole(role);
+        PagRoleCRUD.create(pagRole);
+        role.setId(pagRole.getId());
         return role;
     }
 
-    public PagRole update(PagRole role) throws SQLException {
-        PagRoleCRUD.update(role);
+    public RoleWs update(RoleWs role) throws SQLException {
+        PagRole pagRole = userHelper.buildPagRole(role);
+        PagRoleCRUD.update(pagRole);
         return role;
     }
 
     public Boolean delete(Integer roleId) throws SQLException {
-        Criterias criterias = new Criterias();
-        criterias.addCriteria(new Criteria("id", "=", roleId));
-        PagRole role = PagRoleCRUD.read(criterias).get(0);
+        PagRole role = userHelper.readRole(roleId);
+        List<UserRole> userRoles = role.getUserRoles();
+        for (UserRole userRole : userRoles) {
+            UserRoleCRUD.delete(userRole);
+        }
         return PagRoleCRUD.delete(role);
     }
 
-    public List<PagRole> read() throws SQLException {
-        return PagRoleCRUD.read();
+    public List<RoleWs> read() throws SQLException {
+        List<RoleWs> roles = new ArrayList<RoleWs>();
+        List<PagRole> pagRoles = userHelper.readAllRole();
+        for (PagRole pagRole : pagRoles) {
+            RoleWs role = userHelper.buildRoleWs(pagRole);
+            roles.add(role);
+        }
+        
+        return roles;
     }
 
-    public PagRole read(int idPagRole) throws SQLException {
-        Criterias criterias = new Criterias();
-        criterias.addCriteria(new Criteria("id", "=", idPagRole));
-
-        return PagRoleCRUD.read(criterias).get(0);
+    public RoleWs read(int idPagRole) throws SQLException {
+        PagRole pagRole = userHelper.readRole(idPagRole);
+        RoleWs role = userHelper.buildRoleWs(pagRole);
+        return role;
     }
 }
