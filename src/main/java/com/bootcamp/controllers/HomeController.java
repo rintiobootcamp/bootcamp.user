@@ -15,6 +15,6 @@ public class HomeController {
 
     @RequestMapping("/")
     public String index() {
-        return "Restfull Service for polls";
+        return "index";
     }
 }
