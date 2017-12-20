@@ -29,6 +29,7 @@ public class UserHelper {
         userWs.setId(user.getId());
         userWs.setNom(user.getNom());
         userWs.setEmail(user.getEmail());
+        userWs.setNumero(user.getNumero());
         userWs.setUsername(user.getUsername());
         userWs.setPassword(user.getPassword());
         return userWs;
@@ -41,6 +42,7 @@ public class UserHelper {
         pagUser.setNom(userWs.getNom());
         pagUser.setUsername(userWs.getUsername());
         pagUser.setEmail(userWs.getEmail());
+        pagUser.setNumero(userWs.getNumero());
         return pagUser;
     }
     

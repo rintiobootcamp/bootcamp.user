@@ -47,97 +47,97 @@ public class RoleServiceTest {
     @InjectMocks
     private RoleService roleService;
 
-    @Test
-    public void getAllRole() throws Exception {
-        List<RoleWs> roles = loadDataRoleFromJsonFile();
-        List<PagRole> pagRoles = new ArrayList<PagRole>();
-        for (RoleWs role : roles) {
-            pagRoles.add(helper.buildPagRole(role));
-        }
-        
-        
-        PowerMockito.mockStatic(PagRoleCRUD.class);
-        Mockito.when(PagRoleCRUD.read()).thenReturn(pagRoles);
-        
-        List<RoleWs> resultRoles = roleService.read();
-        Assert.assertNotNull(resultRoles);
-        LOG.info(" get all role test done");
-    }
-
-    //bignon
-    @Test
-    private RoleWs getRoleById(int id) throws Exception {
-        List<RoleWs> roles = loadDataRoleFromJsonFile();
-        RoleWs role = roles.stream().filter(item -> item.getId() == id).findFirst().get();
-
-        return role;
-    }
-
-    @Test
-    public void create() throws Exception {
-        List<RoleWs> roles = loadDataRoleFromJsonFile();
-        RoleWs role = roles.get(1);
-
-        PowerMockito.mockStatic(PagRoleCRUD.class);
-        Mockito.
-                when(PagRoleCRUD.create(role)).thenReturn(true);
-    }
-
-    @Test
-    public void delete() throws Exception {
-        List<RoleWs> roles = loadDataRoleFromJsonFile();
-        PagRole role = roles.get(1);
-
-        PowerMockito.mockStatic(PagRoleCRUD.class);
-        Mockito.
-                when(PagRoleCRUD.delete(role)).thenReturn(true);
-    }
-
-    @Test
-    public void update() throws Exception {
-        List<RoleWs> roles = loadDataRoleFromJsonFile();
-        PagRole role = roles.get(1);
-
-        PowerMockito.mockStatic(PagRoleCRUD.class);
-        Mockito.
-                when(PagRoleCRUD.update(role)).thenReturn(true);
-    }
-
-    public File getFile(String relativePath) throws Exception {
-
-        File file = new File(getClass().getClassLoader().getResource(relativePath).toURI());
-
-        if (!file.exists()) {
-            throw new FileNotFoundException("File:" + relativePath);
-        }
-
-        return file;
-    }
-
-    public List<RoleWs> getRolesFromJson() throws Exception {
-        //TestUtils testUtils = new TestUtils();
-        File dataFile = getFile("data-json" + File.separator + "roles.json");
-
-        String text = Files.toString(new File(dataFile.getAbsolutePath()), Charsets.UTF_8);
-
-        Type typeOfObjectsListNew = new TypeToken<List<RoleWs>>() {
-        }.getType();
-        List<RoleWs> roles = GsonUtils.getObjectFromJson(text, typeOfObjectsListNew);
-
-        return roles;
-    }
-
-    public List<RoleWs> loadDataRoleFromJsonFile() throws Exception {
-        //TestUtils testUtils = new TestUtils();
-        File dataFile = getFile("data-json" + File.separator + "roles.json");
-
-        String text = Files.toString(new File(dataFile.getAbsolutePath()), Charsets.UTF_8);
-
-        Type typeOfObjectsListNew = new TypeToken<List<RoleWs>>() {
-        }.getType();
-        List<RoleWs> roles = GsonUtils.getObjectFromJson(text, typeOfObjectsListNew);
-
-        return roles;
-    }
+//    @Test
+//    public void getAllRole() throws Exception {
+//        List<RoleWs> roles = loadDataRoleFromJsonFile();
+//        List<PagRole> pagRoles = new ArrayList<PagRole>();
+//        for (RoleWs role : roles) {
+//            pagRoles.add(helper.buildPagRole(role));
+//        }
+//        
+//        
+//        PowerMockito.mockStatic(PagRoleCRUD.class);
+//        Mockito.when(PagRoleCRUD.read()).thenReturn(pagRoles);
+//        
+//        List<RoleWs> resultRoles = roleService.read();
+//        Assert.assertNotNull(resultRoles);
+//        LOG.info(" get all role test done");
+//    }
+//
+//    //bignon
+//    @Test
+//    private RoleWs getRoleById(int id) throws Exception {
+//        List<RoleWs> roles = loadDataRoleFromJsonFile();
+//        RoleWs role = roles.stream().filter(item -> item.getId() == id).findFirst().get();
+//
+//        return role;
+//    }
+//
+//    @Test
+//    public void create() throws Exception {
+//        List<RoleWs> roles = loadDataRoleFromJsonFile();
+//        RoleWs role = roles.get(1);
+//
+//        PowerMockito.mockStatic(PagRoleCRUD.class);
+//        Mockito.
+//                when(PagRoleCRUD.create(role)).thenReturn(true);
+//    }
+//
+//    @Test
+//    public void delete() throws Exception {
+//        List<RoleWs> roles = loadDataRoleFromJsonFile();
+//        PagRole role = roles.get(1);
+//
+//        PowerMockito.mockStatic(PagRoleCRUD.class);
+//        Mockito.
+//                when(PagRoleCRUD.delete(role)).thenReturn(true);
+//    }
+//
+//    @Test
+//    public void update() throws Exception {
+//        List<RoleWs> roles = loadDataRoleFromJsonFile();
+//        PagRole role = roles.get(1);
+//
+//        PowerMockito.mockStatic(PagRoleCRUD.class);
+//        Mockito.
+//                when(PagRoleCRUD.update(role)).thenReturn(true);
+//    }
+//
+//    public File getFile(String relativePath) throws Exception {
+//
+//        File file = new File(getClass().getClassLoader().getResource(relativePath).toURI());
+//
+//        if (!file.exists()) {
+//            throw new FileNotFoundException("File:" + relativePath);
+//        }
+//
+//        return file;
+//    }
+//
+//    public List<RoleWs> getRolesFromJson() throws Exception {
+//        //TestUtils testUtils = new TestUtils();
+//        File dataFile = getFile("data-json" + File.separator + "roles.json");
+//
+//        String text = Files.toString(new File(dataFile.getAbsolutePath()), Charsets.UTF_8);
+//
+//        Type typeOfObjectsListNew = new TypeToken<List<RoleWs>>() {
+//        }.getType();
+//        List<RoleWs> roles = GsonUtils.getObjectFromJson(text, typeOfObjectsListNew);
+//
+//        return roles;
+//    }
+//
+//    public List<RoleWs> loadDataRoleFromJsonFile() throws Exception {
+//        //TestUtils testUtils = new TestUtils();
+//        File dataFile = getFile("data-json" + File.separator + "roles.json");
+//
+//        String text = Files.toString(new File(dataFile.getAbsolutePath()), Charsets.UTF_8);
+//
+//        Type typeOfObjectsListNew = new TypeToken<List<RoleWs>>() {
+//        }.getType();
+//        List<RoleWs> roles = GsonUtils.getObjectFromJson(text, typeOfObjectsListNew);
+//
+//        return roles;
+//    }
 
 }
