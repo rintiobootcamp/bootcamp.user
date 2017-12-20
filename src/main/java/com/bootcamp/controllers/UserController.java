@@ -29,7 +29,8 @@ import java.util.logging.Logger;
 @RestController("UserController")
 @RequestMapping("/users")
 @Api(value = "PagUser API", description = "PagUser API")
-public class UserController {
+public class
+UserController {
 
     @Autowired
     UserService userService;
@@ -41,12 +42,9 @@ public class UserController {
 
         HttpStatus httpStatus = null;
 
-        try {
-            userws = userService.create(userws);
-            httpStatus = HttpStatus.OK;
-        } catch (SQLException ex) {
-            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        userws = userService.create(userws);
+        httpStatus = HttpStatus.OK;
+
         return new ResponseEntity<>(userws, httpStatus);
     }
 
@@ -58,12 +56,9 @@ public class UserController {
         user = userService.update(user);
         HttpStatus httpStatus = null;
 
-        try {
-            user = userService.update(user);
-            httpStatus = HttpStatus.OK;
-        } catch (SQLException ex) {
-            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        user = userService.update(user);
+        httpStatus = HttpStatus.OK;
+
         return new ResponseEntity<>(user, httpStatus);
     }
 
@@ -75,45 +70,36 @@ public class UserController {
         Boolean status = null;
         HttpStatus httpStatus = null;
 
-        try {
-            status = userService.delete(id);
-            httpStatus = HttpStatus.OK;
-        } catch (SQLException ex) {
-            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        status = userService.delete(id);
+        httpStatus = HttpStatus.OK;
+
         return new ResponseEntity<>(status, httpStatus);
     }
 
     @RequestMapping(method = RequestMethod.GET)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "List of user", notes = "List of user")
-    public ResponseEntity<List<UserWs>> read() {
+    public ResponseEntity<List<UserWs>> read() throws SQLException {
         List<UserWs> users = null;
         HttpStatus httpStatus = null;
 
-        try {
-            users = userService.read();
-            httpStatus = HttpStatus.OK;
-        } catch (SQLException ex) {
-            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        users = userService.read();
+        httpStatus = HttpStatus.OK;
+
         return new ResponseEntity<>(users, httpStatus);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Get a user with its id", notes = "Get a user with its id")
-    public ResponseEntity<UserWs> read(@PathVariable(name = "id") int id) {
+    public ResponseEntity<UserWs> read(@PathVariable(name = "id") int id) throws SQLException {
 
         UserWs user = null;
         HttpStatus httpStatus = null;
 
-        try {
-            user = userService.read(id);
-            httpStatus = HttpStatus.OK;
-        } catch (SQLException ex) {
-            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        user = userService.read(id);
+        httpStatus = HttpStatus.OK;
+
         return new ResponseEntity<>(user, httpStatus);
     }
 
@@ -124,12 +110,9 @@ public class UserController {
         UserWs user = null;
         HttpStatus httpStatus = null;
 
-        try {
-            user = userService.setRoleToUser(idUser, idRole);
-            httpStatus = HttpStatus.OK;
-        } catch (SQLException ex) {
-            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        user = userService.setRoleToUser(idUser, idRole);
+        httpStatus = HttpStatus.OK;
+
         return new ResponseEntity<>(user, httpStatus);
     }
 
@@ -138,33 +121,27 @@ public class UserController {
     @ApiOperation(value = "delete a role from a user", notes = "delete a role from a user")
     public ResponseEntity<UserWs> deleteRoleFromUser(@PathVariable(name = "idUser") int idUser, @PathVariable(name = "idRole") int idRole) throws SQLException, IOException {
         UserWs user = null;
-        
+
         HttpStatus httpStatus = null;
 
-        try {
-            user = userService.deleteRoleFromUser(idUser, idRole);
-            httpStatus = HttpStatus.OK;
-        } catch (SQLException ex) {
-            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        user = userService.deleteRoleFromUser(idUser, idRole);
+        httpStatus = HttpStatus.OK;
+
         return new ResponseEntity<>(user, httpStatus);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/roles/{idUser}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "get user's roles", notes = "get user's roles")
-    public ResponseEntity<List<RoleWs>> getUserRoles(@PathVariable(name = "idUser") int idUser) {
-        
+    public ResponseEntity<List<RoleWs>> getUserRoles(@PathVariable(name = "idUser") int idUser) throws SQLException {
+
         List<RoleWs> roles = null;
-        
+
         HttpStatus httpStatus = null;
 
-        try {
-            roles = userService.getUserRoles(idUser);
-            httpStatus = HttpStatus.OK;
-        } catch (SQLException ex) {
-            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        roles = userService.getUserRoles(idUser);
+        httpStatus = HttpStatus.OK;
+
         return new ResponseEntity<>(roles, httpStatus);
     }
 }
