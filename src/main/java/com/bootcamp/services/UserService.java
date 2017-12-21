@@ -53,7 +53,7 @@ public class UserService {
                 "La creation de votre compte a ete un succes.\n" +
                 "Vos informations sont les suivantes : \n"+
                 "Nom : "+pagUser.getNom()+"\n" +
-                "Mot de passe : "+pagUser.getPassword()+"\n" +
+                "Mot de passe : "+pagUser.getPassword()+"\n\n" +
                 "Cliquez sur le lien ci-dessous pour changer le mot de passe s'il ne vous convient pas.\n" +
                 link +"\n\n"+
                 signature
