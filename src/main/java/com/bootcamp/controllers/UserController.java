@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.mail.MessagingException;
 
 /**
  * Created by darextossa on 12/17/17.
@@ -29,8 +30,7 @@ import java.util.logging.Logger;
 @RestController("UserController")
 @RequestMapping("/users")
 @Api(value = "PagUser API", description = "PagUser API")
-public class
-UserController {
+public class UserController {
 
     @Autowired
     UserService userService;
@@ -38,11 +38,12 @@ UserController {
     @RequestMapping(method = RequestMethod.POST)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Save a new user", notes = "Save a new user")
-    public ResponseEntity<UserWs> create(@RequestBody @Valid UserWs userws) throws SQLException, IOException {
+    public ResponseEntity<UserWs> create(@RequestBody @Valid UserWs userws) throws SQLException, IOException, MessagingException {
 
         HttpStatus httpStatus = null;
 
-        userws = userService.create(userws);
+        PagUser user = userService.create(userws);
+
         httpStatus = HttpStatus.OK;
 
         return new ResponseEntity<>(userws, httpStatus);
@@ -60,6 +61,19 @@ UserController {
         httpStatus = HttpStatus.OK;
 
         return new ResponseEntity<>(user, httpStatus);
+    }
+
+    @RequestMapping(method = RequestMethod.PUT ,value = "{id}/{newpassword}")
+    @ApiVersions({"1.0"})
+    @ApiOperation(value = "update a user password", notes = "update a user password")
+    public ResponseEntity<String> changePassword(@PathVariable(name="id") int id,@PathVariable(name="newpassword") String newpassword) throws SQLException, IOException, MessagingException {
+
+        HttpStatus httpStatus = null;
+
+        String newpwd = userService.changePassword(id, newpassword);
+        httpStatus = HttpStatus.OK;
+
+        return new ResponseEntity<>(newpwd, httpStatus);
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
@@ -92,15 +106,15 @@ UserController {
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Get a user with its id", notes = "Get a user with its id")
-    public ResponseEntity<UserWs> read(@PathVariable(name = "id") int id) throws SQLException {
+    public ResponseEntity<PagUser> read(@PathVariable(name = "id") int id) throws SQLException {
 
-        UserWs user = null;
+        PagUser pagUser = null;
         HttpStatus httpStatus = null;
 
-        user = userService.read(id);
+        pagUser = userService.read(id);
         httpStatus = HttpStatus.OK;
 
-        return new ResponseEntity<>(user, httpStatus);
+        return new ResponseEntity<>(pagUser, httpStatus);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/addPagRole/{idUser}/{idRole}")
