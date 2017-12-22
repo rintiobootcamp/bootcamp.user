@@ -1,8 +1,5 @@
 package com.bootcamp.services;
 
-import com.bootcamp.commons.models.Criteria;
-import com.bootcamp.commons.models.Criterias;
-import com.bootcamp.commons.models.Rule;
 import com.bootcamp.commons.ws.usecases.pivotone.RoleWs;
 import com.bootcamp.commons.ws.usecases.pivotone.UserWs;
 import com.bootcamp.crud.PagUserCRUD;
@@ -12,19 +9,26 @@ import com.bootcamp.entities.PagUser;
 import com.bootcamp.entities.PagRole;
 import com.bootcamp.entities.UserRole;
 import com.bootcamp.helpers.UserHelper;
-import com.bootcamp.sender.MailSender;
-import java.rmi.server.UID;
+import java.io.IOException;
 import org.springframework.stereotype.Component;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import java.util.UUID;
+import javax.mail.Message;
 import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Value;
 
 /**
  * Created by darextossa on 12/17/17.
+ * Updated by bignon and aremou on 12/12/17.
  */
 @Component
 public class UserService {
@@ -40,9 +44,19 @@ public class UserService {
     
     @Value("${resetpassword.link}")
     private String link;
+    
+    @Value("${mail.username}")
+    private String USER_NAME;
+    
+    @Value("${mail.password}")
+    private String PASSWORD;
+    
+    @Value("${mail.host}")
+    private String host;
+    
 
     // create a user
-    public PagUser create(UserWs userWs) throws SQLException, MessagingException {
+    public PagUser create(UserWs userWs) throws SQLException, MessagingException, IOException {
         PagUser pagUser = userHelper.buildPagUser(userWs);
         pagUser.setPassword(passwordGenerator());
         pagUser.setReset(false);
@@ -63,7 +77,7 @@ public class UserService {
         
         String subject = "Creation de Compte sur "+plateformeName;
         
-        MailSender.sendMail(msg, to, subject);
+        sendMail(msg, to, subject);
         
         userWs.setId(pagUser.getId());
 
@@ -184,15 +198,15 @@ public class UserService {
     }
     
     //password change
-    public String changePassword(int id, String password) throws SQLException, MessagingException {
+    public String changePassword(int id, String password) throws SQLException, MessagingException, IOException {
         PagUser pagUser = read(id);
         pagUser.setPassword(password);
         PagUserCRUD.update(pagUser);
         
-        String msg = "Vous avez un nouveau mot de passe !\n"+
-                "Le mot de passe vous permettant de vous connecter à la plateforme de $nom_plateforme  a été modifié.\n" +
-                "Nom : "+pagUser.getNom()+"\n" +
-                "Votre nouveau mot de passe est : "+pagUser.getPassword()+"\n" +
+        String msg = "Felicitations!"+
+                pagUser.getUsername()+"\n\n" +
+                "Le mot de passe vous permettant de vous connecter à la plateforme de "+ plateformeName+"  a été modifié.\n\n\n" +
+                
                 "Cordialement \n\n"+
                 signature
                 ;
@@ -201,11 +215,53 @@ public class UserService {
         
         String subject = "Modification de mot de passe sur "+plateformeName;
         
-        MailSender.sendMail(msg, to, subject);
+        sendMail(msg, to, subject);
         
-        return pagUser.getPassword(); 
-        
-        
+        return pagUser.getPassword();        
     }
+    
+    public void sendMail(String messageMail, String[] destinataires,String subject) throws MessagingException, IOException {
+        String body = messageMail;
+        String[] to = destinataires;
+
+        System.setProperty("https.protocols", "TLSv1.1");
+        Properties props = System.getProperties();
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.host", host);
+        props.put("mail.smtp.user", USER_NAME);
+        props.put("mail.smtp.password", PASSWORD);
+        props.put("mail.smtp.port", "587");
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.ssl.trust", host);
+
+        Session session = Session.getDefaultInstance(props);
+        MimeMessage message = new MimeMessage(session);
+
+        try {
+            message.setFrom(new InternetAddress(USER_NAME));
+            InternetAddress[] toAddress = new InternetAddress[to.length];
+
+            // To get the array of addresses
+            for (int i = 0; i < to.length; i++) {
+                toAddress[i] = new InternetAddress(to[i]);
+            }
+
+            for (int i = 0; i < toAddress.length; i++) {
+                message.addRecipient(Message.RecipientType.TO, toAddress[i]);
+            }
+
+            message.setSubject(subject);
+            message.setText(body);
+            Transport transport = session.getTransport("smtp");
+            transport.connect(host, USER_NAME, PASSWORD);
+            transport.sendMessage(message, message.getAllRecipients());
+            transport.close();
+        } catch (AddressException ae) {
+            ae.printStackTrace();
+        } catch (MessagingException me) {
+            me.printStackTrace();
+        }
+    }
+
     
 }
