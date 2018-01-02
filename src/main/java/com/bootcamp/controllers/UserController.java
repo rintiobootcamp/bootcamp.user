@@ -38,7 +38,7 @@ public class UserController {
     @RequestMapping(method = RequestMethod.POST)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Save a new user", notes = "Save a new user")
-    public ResponseEntity<UserWs> create(@RequestBody @Valid UserWs userws) throws SQLException, IOException, MessagingException {
+    public ResponseEntity<PagUser> create(@RequestBody @Valid UserWs userws) throws SQLException, IOException, MessagingException {
 
         HttpStatus httpStatus = null;
 
@@ -46,23 +46,19 @@ public class UserController {
 
         httpStatus = HttpStatus.OK;
 
-        return new ResponseEntity<>(userws, httpStatus);
+        return new ResponseEntity<>(user, httpStatus);
     }
 
     @RequestMapping(method = RequestMethod.PUT)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "update a  user", notes = "update a  user")
-    public ResponseEntity<UserWs> update(@RequestBody @Valid UserWs user) throws SQLException, IOException {
+    public ResponseEntity<PagUser> update(@RequestBody @Valid UserWs user) throws SQLException, IOException {
 
-        user = userService.update(user);
-        HttpStatus httpStatus = null;
+        PagUser result = userService.update(user);
 
-        user = userService.update(user);
-        httpStatus = HttpStatus.OK;
-
-        return new ResponseEntity<>(user, httpStatus);
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
-
+/*
     @RequestMapping(method = RequestMethod.PUT ,value = "{id}/{newpassword}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "update a user password", notes = "update a user password")
@@ -74,7 +70,7 @@ public class UserController {
         httpStatus = HttpStatus.OK;
 
         return new ResponseEntity<>(newpwd, httpStatus);
-    }
+    }*/
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
     @ApiVersions({"1.0"})
@@ -93,14 +89,9 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "List of user", notes = "List of user")
-    public ResponseEntity<List<UserWs>> read() throws SQLException {
-        List<UserWs> users = null;
-        HttpStatus httpStatus = null;
-
-        users = userService.read();
-        httpStatus = HttpStatus.OK;
-
-        return new ResponseEntity<>(users, httpStatus);
+    public ResponseEntity<List<PagUser>> read() throws SQLException {
+        List<PagUser> users = userService.read();
+             return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
@@ -117,7 +108,7 @@ public class UserController {
         return new ResponseEntity<>(pagUser, httpStatus);
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/addPagRole/{idUser}/{idRole}")
+    @RequestMapping(method = RequestMethod.PUT, value = "/{idUser}/roles/{idRole}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "add a role to a user", notes = "add a role to a user")
     public ResponseEntity<UserWs> setRoleToUser(@PathVariable(name = "idUser") int idUser, @PathVariable(name = "idRole") int idRole) throws SQLException, IOException {
@@ -130,7 +121,7 @@ public class UserController {
         return new ResponseEntity<>(user, httpStatus);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, value = "/deletePagRole/{idUser}/{idRole}")
+    @RequestMapping(method = RequestMethod.DELETE, value = "/{idUser}/roles/{idRole}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "delete a role from a user", notes = "delete a role from a user")
     public ResponseEntity<UserWs> deleteRoleFromUser(@PathVariable(name = "idUser") int idUser, @PathVariable(name = "idRole") int idRole) throws SQLException, IOException {
@@ -144,7 +135,7 @@ public class UserController {
         return new ResponseEntity<>(user, httpStatus);
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/roles/{idUser}")
+    @RequestMapping(method = RequestMethod.GET, value = "/{idUser}/roles")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "get user's roles", notes = "get user's roles")
     public ResponseEntity<List<RoleWs>> getUserRoles(@PathVariable(name = "idUser") int idUser) throws SQLException {
