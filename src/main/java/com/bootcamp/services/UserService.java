@@ -123,8 +123,7 @@ public class UserService {
         for (UserRole userRole : userRoles) {
             UserRoleCRUD.delete(userRole);
         }
-        //return PagUserCRUD.delete(pagUser);
-        return true;
+        return PagUserCRUD.delete(pagUser);
     }
 
     //get a user id and returns its roles
@@ -170,8 +169,7 @@ public class UserService {
         UserRole userRole = new UserRole();
         userRole.setPagRole(role);
         userRole.setPagUser(pagUser);
-        UserRoleCRUD.create(userRole);
-        
+       // UserRoleCRUD.create(userRole);
         UserWs userWs = userHelper.buildUserWs(pagUser);
         userWs.setRoles(userHelper.buildRolesWsOfUser(pagUser));
         

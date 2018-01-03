@@ -113,7 +113,7 @@ public class RoleControllerIntegrationTest {
 
     @Test(priority = 4, groups = {"roleTest"})
     public void deleteRoleTest(){
-        String deleteURI = BASE_URI+ROLE_PATH+"/"+rolewsId;
+        String deleteURI = BASE_URI+ROLE_PATH+"/"+1;
         Response response = given()
                 .log().all()
                 .contentType("application/json")

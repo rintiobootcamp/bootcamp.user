@@ -67,7 +67,7 @@ public class UserControllerIntegrationTest {
     public void createRoleTest(){
         String createURI = BASE_URI+ROLE_PATH;
         RoleWs roleWs = new RoleWs();
-        roleWs.setName( "ADMIN" );
+        roleWs.setName( "CLIENT" );
         Gson gson = new Gson();
         String roleData = gson.toJson( roleWs );
         Response response = given()
@@ -181,7 +181,7 @@ public class UserControllerIntegrationTest {
         Assert.assertEquals(response.statusCode(), 200) ;
 
     }
-   // @Test(priority = 8, groups = {"roleTest"})
+    @Test(priority = 8, groups = {"roleTest"})
     public void deleteUserTest(){
         String deleteURI = BASE_URI+USER_PATH+"/"+userId;
         Response response = given()

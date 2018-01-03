@@ -7392,4 +7392,1600 @@ java.lang.IllegalStateException: Cannot call sendError() after the response has 
 [m[32m2018-01-02 18:26:48.264 WAT [Thread-3] o.s.b.a.e.j.EndpointMBeanExporter INFO : Unregistering JMX-exposed beans on shutdown
 [m[32m2018-01-02 18:26:48.264 WAT [Thread-3] o.s.b.a.e.j.EndpointMBeanExporter INFO : Unregistering JMX-exposed beans
 [m[32m2018-01-02 18:26:48.265 WAT [Thread-3] o.s.j.e.a.AnnotationMBeanExporter INFO : Unregistering JMX-exposed beans on shutdown
+[m[32m2018-01-03 10:32:48.654 WAT [main] c.b.a.Application INFO : Starting Application on itbrain with PID 3620 (/home/ibrahim/release4/bootcamp.user/target/classes started by ibrahim in /home/ibrahim/release4/bootcamp.user)
+[m[32m2018-01-03 10:32:48.657 WAT [main] c.b.a.Application DEBUG: Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+[m[32m2018-01-03 10:32:48.658 WAT [main] c.b.a.Application INFO : No active profile set, falling back to default profiles: default
+[m[32m2018-01-03 10:32:49.879 WAT [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext INFO : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1474ea23: startup date [Wed Jan 03 10:32:49 WAT 2018]; root of context hierarchy
+[m[32m2018-01-03 10:32:52.958 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$71915f96] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 10:32:52.993 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$6605243a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 10:32:53.224 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 10:32:53.238 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheManagerCustomizers' of type [org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 10:32:53.242 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration' of type [org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration$$EnhancerBySpringCGLIB$$7a0971b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 10:32:53.252 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheManager' of type [org.springframework.cache.concurrent.ConcurrentMapCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 10:32:53.253 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheAutoConfigurationValidator' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 10:32:54.125 WAT [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer INFO : Tomcat initialized with port(s): 8091 (http)
+[m[32m2018-01-03 10:32:54.393 WAT [localhost-startStop-1] o.s.w.c.ContextLoader INFO : Root WebApplicationContext: initialization completed in 4515 ms
+[m[32m2018-01-03 10:32:54.802 WAT [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean INFO : Mapping servlet: 'dispatcherServlet' to [/]
+[m[32m2018-01-03 10:32:54.810 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'metricsFilter' to: [/*]
+[m[32m2018-01-03 10:32:54.811 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'characterEncodingFilter' to: [/*]
+[m[32m2018-01-03 10:32:54.811 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+[m[32m2018-01-03 10:32:54.811 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'applicationContextIdFilter' to: [/*]
+[m[32m2018-01-03 10:32:55.721 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/]}" onto public java.lang.String com.bootcamp.controllers.HomeController.index()
+[m[32m2018-01-03 10:32:55.734 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.update(com.bootcamp.commons.ws.usecases.pivotone.RoleWs) throws java.sql.SQLException
+[m[32m2018-01-03 10:32:55.735 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.commons.ws.usecases.pivotone.RoleWs>> com.bootcamp.controllers.RoleController.read() throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 10:32:55.738 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.read(int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 10:32:55.739 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.bootcamp.controllers.RoleController.delete(int) throws java.sql.SQLException
+[m[32m2018-01-03 10:32:55.740 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.create(com.bootcamp.commons.ws.usecases.pivotone.RoleWs) throws java.sql.SQLException
+[m[32m2018-01-03 10:32:55.747 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles/{idRole}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.UserWs> com.bootcamp.controllers.UserController.setRoleToUser(int,int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 10:32:55.748 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles/{idRole}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.UserWs> com.bootcamp.controllers.UserController.deleteRoleFromUser(int,int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 10:32:55.749 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.commons.ws.usecases.pivotone.RoleWs>> com.bootcamp.controllers.UserController.getUserRoles(int) throws java.sql.SQLException
+[m[32m2018-01-03 10:32:55.750 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.update(com.bootcamp.commons.ws.usecases.pivotone.UserWs) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 10:32:55.751 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.entities.PagUser>> com.bootcamp.controllers.UserController.read() throws java.sql.SQLException
+[m[32m2018-01-03 10:32:55.752 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.read(int) throws java.sql.SQLException
+[m[32m2018-01-03 10:32:55.753 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.bootcamp.controllers.UserController.delete(int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 10:32:55.754 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.create(com.bootcamp.commons.ws.usecases.pivotone.UserWs) throws java.sql.SQLException,java.io.IOException,javax.mail.MessagingException
+[m[32m2018-01-03 10:32:55.756 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+[m[32m2018-01-03 10:32:55.771 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[m[32m2018-01-03 10:32:55.772 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[m[32m2018-01-03 10:32:55.774 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[m[32m2018-01-03 10:32:55.783 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[m[32m2018-01-03 10:32:55.785 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[m[32m2018-01-03 10:32:56.403 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+[m[32m2018-01-03 10:32:56.405 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 10:32:56.407 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+[m[32m2018-01-03 10:32:56.408 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 10:32:56.410 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 10:32:56.412 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+[m[32m2018-01-03 10:32:56.413 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 10:32:56.415 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+[m[32m2018-01-03 10:32:56.416 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+[m[32m2018-01-03 10:32:56.417 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 10:32:56.419 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 10:32:56.421 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 10:32:56.422 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 10:32:56.423 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 10:32:56.431 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+[m[32m2018-01-03 10:32:56.432 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+[m[32m2018-01-03 10:32:56.432 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 10:32:56.915 WAT [main] o.s.w.s.h.SimpleUrlHandlerMapping INFO : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[m[32m2018-01-03 10:32:56.915 WAT [main] o.s.w.s.h.SimpleUrlHandlerMapping INFO : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[m[32m2018-01-03 10:32:57.034 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter INFO : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1474ea23: startup date [Wed Jan 03 10:32:49 WAT 2018]; root of context hierarchy
+[m[33m2018-01-03 10:32:58.811 WAT [main] o.s.b.a.t.AbstractTemplateResolverConfiguration WARN : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+[m[32m2018-01-03 10:32:59.024 WAT [main] o.s.j.e.a.AnnotationMBeanExporter INFO : Registering beans for JMX exposure on startup
+[m[32m2018-01-03 10:32:59.040 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Registering beans for JMX exposure on startup
+[m[32m2018-01-03 10:32:59.062 WAT [main] o.s.c.s.DefaultLifecycleProcessor INFO : Starting beans in phase 0
+[m[32m2018-01-03 10:32:59.066 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'auditEventsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=auditEventsEndpoint]
+[m[32m2018-01-03 10:32:59.099 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+[m[32m2018-01-03 10:32:59.125 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+[m[32m2018-01-03 10:32:59.134 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+[m[32m2018-01-03 10:32:59.141 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+[m[32m2018-01-03 10:32:59.148 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+[m[32m2018-01-03 10:32:59.154 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'loggersEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=loggersEndpoint]
+[m[32m2018-01-03 10:32:59.166 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+[m[32m2018-01-03 10:32:59.171 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+[m[32m2018-01-03 10:32:59.179 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+[m[32m2018-01-03 10:32:59.184 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+[m[32m2018-01-03 10:32:59.189 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+[m[32m2018-01-03 10:32:59.193 WAT [main] o.s.c.s.DefaultLifecycleProcessor INFO : Starting beans in phase 2147483647
+[m[32m2018-01-03 10:32:59.940 WAT [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer INFO : Tomcat started on port(s): 8091 (http)
+[m[32m2018-01-03 10:32:59.952 WAT [main] c.b.a.Application INFO : Started Application in 14.584 seconds (JVM running for 40.101)
+[m[32m2018-01-03 10:33:58.168 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 10:33:58.204 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "iskys",
+    "password": "1ek81zc5xrvnh",
+    "email": "iskys2k@gmail.com",
+    "nom": "Iskyrou",
+    "dateCreation": 0[32m2018-01-03 12:20:30.654 WAT [Thread-3] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext INFO : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1474ea23: startup date [Wed Jan 03 10:32:49 WAT 2018]; root of context hierarchy
+[m[32m2018-01-03 12:20:30.661 WAT [Thread-3] o.s.c.s.DefaultLifecycleProcessor INFO : Stopping beans in phase 2147483647
+[m[32m2018-01-03 12:20:30.669 WAT [Thread-3] o.s.c.s.DefaultLifecycleProcessor INFO : Stopping beans in phase 0
+[m[32m2018-01-03 12:20:30.669 WAT [Thread-3] o.s.b.a.e.j.EndpointMBeanExporter INFO : Unregistering JMX-exposed beans on shutdown
+[m[32m2018-01-03 12:20:30.670 WAT [Thread-3] o.s.b.a.e.j.EndpointMBeanExporter INFO : Unregistering JMX-exposed beans
+[m[32m2018-01-03 12:20:30.671 WAT [Thread-3] o.s.j.e.a.AnnotationMBeanExporter INFO : Unregistering JMX-exposed beans on shutdown
+[m,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/users/1/roles"
+}
+[m[32m2018-01-03 10:34:38.129 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 10:34:38.131 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "itbrain",
+    "password": "pass",
+    "email": "hibrahimyya@gmail.com",
+    "nom": "Barriath Rahimi",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97950121"
+}
+[m[32m2018-01-03 10:34:38.198 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514972078186,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/users/1"
+}
+[m[32m2018-01-03 10:34:38.253 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    
+]
+[m[32m2018-01-03 10:34:38.308 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 10:34:38.310 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "itbrain",
+    "password": "pass",
+    "nom": "Barriath Rahimi",
+    "email": "hibrahimyya@gmail.com",
+    "numero": "97950121",
+    "roles": null
+}
+[m[32m2018-01-03 11:26:57.995 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 11:26:58.043 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "iskys",
+    "password": "-1pehim8uycso5",
+    "email": "iskys2k@gmail.com",
+    "nom": "Iskyrou",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97147563"
+}
+[m[32m2018-01-03 11:26:58.233 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 11:26:58.234 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "name": "ADMIN"
+}
+[m[32m2018-01-03 11:26:58.544 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 11:26:58.548 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "iskys",
+    "password": "-1pehim8uycso5",
+    "nom": "Iskyrou",
+    "email": "iskys2k@gmail.com",
+    "numero": "97147563",
+    "roles": [
+        {
+            "id": 1,
+            "name": "ADMIN"
+        }
+    ]
+}
+[m[32m2018-01-03 11:26:58.608 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 11:26:58.610 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "name": "ADMIN"
+    }
+]
+[m[32m2018-01-03 11:26:58.800 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 11:26:58.802 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "itbrain",
+    "password": "pass",
+    "email": "hibrahimyya@gmail.com",
+    "nom": "Barriath Rahimi",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97950121"
+}
+[m[32m2018-01-03 11:26:58.850 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "iskys",
+    "password": "-1pehim8uycso5",
+    "email": "iskys2k@gmail.com",
+    "nom": "Iskyrou",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97147563"
+}
+[m[32m2018-01-03 11:26:58.903 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "username": "iskys",
+        "password": "-1pehim8uycso5",
+        "email": "iskys2k@gmail.com",
+        "nom": "Iskyrou",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "reset": false,
+        "userRoles": [
+            
+        ],
+        "numero": "97147563"
+    }
+]
+[m[32m2018-01-03 11:26:58.974 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 11:26:58.976 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "iskys",
+    "password": "-1pehim8uycso5",
+    "nom": "Iskyrou",
+    "email": "iskys2k@gmail.com",
+    "numero": "97147563",
+    "roles": null
+}
+[m[32m2018-01-03 11:26:59.014 WAT [main] c.b.UserControllerIntegrationTest DEBUG: true
+[m[32m2018-01-03 11:27:35.932 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: 0
+[m[32m2018-01-03 11:27:35.949 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: {
+    "timestamp": 1514975255765,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "javax.persistence.RollbackException",
+    "message": "Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd): org.eclipse.persistence.exceptions.DatabaseException\nInternal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'ADMIN' for key 'NAME'\nError Code: 1062\nCall: INSERT INTO PAGROLE (NAME) VALUES (?)\n\tbind => [1 parameter bound]\nQuery: InsertObjectQuery(com.bootcamp.entities.PagRole@7d90c329)",
+    "path": "/user/roles"
+}
+[m[32m2018-01-03 11:27:36.161 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: 0
+[m[32m2018-01-03 11:27:36.163 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: {
+    "id": 0,
+    "name": "PARTENAIRE"
+}
+[m[32m2018-01-03 11:27:36.237 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: {
+    "timestamp": 1514975256229,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/roles/0"
+}
+[m[32m2018-01-03 11:27:36.419 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "name": "ADMIN"
+    },
+    {
+        "id": 3,
+        "name": "PARTENAIRE"
+    }
+]
+[m[32m2018-01-03 11:27:36.484 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: {
+    "timestamp": 1514975256479,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/roles/0"
+}
+[m[32m2018-01-03 11:28:53.641 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "name": "ADMIN"
+    },
+    {
+        "id": 3,
+        "name": "PARTENAIRE"
+    }
+]
+[m[32m2018-01-03 11:29:45.025 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: {
+    "timestamp": 1514975384842,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "javax.persistence.RollbackException",
+    "message": "Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd): org.eclipse.persistence.exceptions.DatabaseException\nInternal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`bootcamp`.`USERROLE`, CONSTRAINT `FK_USERROLE_PAGROLE_ID` FOREIGN KEY (`PAGROLE_ID`) REFERENCES `PAGROLE` (`ID`))\nError Code: 1451\nCall: DELETE FROM PAGROLE WHERE (ID = ?)\n\tbind => [1 parameter bound]\nQuery: DeleteObjectQuery(com.bootcamp.entities.PagRole@26be590f)",
+    "path": "/user/roles/1"
+}
+[m[32m2018-01-03 11:34:27.041 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 2
+[m[32m2018-01-03 11:34:27.073 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 2,
+    "username": "iskys",
+    "password": "-1jhxr2tcjqde4",
+    "email": "iskys2k@gmail.com",
+    "nom": "Iskyrou",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97147563"
+}
+[m[32m2018-01-03 11:34:27.357 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 0
+[m[32m2018-01-03 11:34:27.360 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514975667342,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "javax.persistence.RollbackException",
+    "message": "Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd): org.eclipse.persistence.exceptions.DatabaseException\nInternal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'ADMIN' for key 'NAME'\nError Code: 1062\nCall: INSERT INTO PAGROLE (NAME) VALUES (?)\n\tbind => [1 parameter bound]\nQuery: InsertObjectQuery(com.bootcamp.entities.PagRole@1e31860b)",
+    "path": "/user/roles"
+}
+[m[32m2018-01-03 11:34:27.529 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 2
+[m[32m2018-01-03 11:34:27.531 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514975667521,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/users/2/roles/0"
+}
+[m[32m2018-01-03 11:34:27.626 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 2
+[m[32m2018-01-03 11:34:27.632 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    
+]
+[m[32m2018-01-03 11:34:27.872 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 2
+[m[32m2018-01-03 11:34:27.875 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514975667866,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "javax.persistence.RollbackException",
+    "message": "Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd): org.eclipse.persistence.exceptions.DatabaseException\nInternal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'hibrahimyya@gmail.com' for key 'EMAIL'\nError Code: 1062\nCall: UPDATE PAGUSER SET EMAIL = ?, NOM = ?, NUMERO = ?, PASSWORD = ?, USERNAME = ? WHERE (ID = ?)\n\tbind => [6 parameters bound]\nQuery: UpdateObjectQuery(com.bootcamp.entities.PagUser@5a47b009)",
+    "path": "/user/users"
+}
+[m[32m2018-01-03 11:34:27.948 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 2,
+    "username": "iskys",
+    "password": "-1jhxr2tcjqde4",
+    "email": "iskys2k@gmail.com",
+    "nom": "Iskyrou",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97147563"
+}
+[m[32m2018-01-03 11:34:28.055 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "username": "itbrain",
+        "password": "pass",
+        "email": "hibrahimyya@gmail.com",
+        "nom": "Barriath Rahimi",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "reset": false,
+        "userRoles": [
+            
+        ],
+        "numero": "97950121"
+    },
+    {
+        "id": 2,
+        "username": "iskys",
+        "password": "-1jhxr2tcjqde4",
+        "email": "iskys2k@gmail.com",
+        "nom": "Iskyrou",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "reset": false,
+        "userRoles": [
+            
+        ],
+        "numero": "97147563"
+    }
+]
+[m[32m2018-01-03 11:34:28.136 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 2
+[m[32m2018-01-03 11:34:28.145 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 2,
+    "username": "iskys",
+    "password": "-1jhxr2tcjqde4",
+    "nom": "Iskyrou",
+    "email": "iskys2k@gmail.com",
+    "numero": "97147563",
+    "roles": null
+}
+[m[32m2018-01-03 11:34:28.217 WAT [main] c.b.UserControllerIntegrationTest DEBUG: true
+[m[32m2018-01-03 11:49:09.473 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "username": "itbrain",
+        "password": "pass",
+        "email": "hibrahimyya@gmail.com",
+        "nom": "Barriath Rahimi",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "reset": false,
+        "userRoles": [
+            
+        ],
+        "numero": "97950121"
+    }
+]
+[m[32m2018-01-03 12:13:32.587 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 12:13:32.609 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "name": "ADMIN"
+}
+[m[32m2018-01-03 12:13:33.405 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 12:13:33.407 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "name": "PARTENAIRE"
+}
+[m[32m2018-01-03 12:13:33.535 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "name": "ADMIN"
+}
+[m[32m2018-01-03 12:13:33.708 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "name": "PARTENAIRE"
+    }
+]
+[m[32m2018-01-03 12:13:33.915 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: true
+[m[32m2018-01-03 12:13:56.488 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: [
+    
+]
+[m[32m2018-01-03 12:14:12.994 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 12:14:13.011 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "iskys",
+    "password": "-wlc84e8vms9r",
+    "email": "iskys2k@gmail.com",
+    "nom": "Iskyrou",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97147563"
+}
+[m[32m2018-01-03 12:14:13.165 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 2
+[m[32m2018-01-03 12:14:13.167 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 2,
+    "name": "ADMIN"
+}
+[m[32m2018-01-03 12:14:13.296 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 12:14:13.299 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "iskys",
+    "password": "-wlc84e8vms9r",
+    "nom": "Iskyrou",
+    "email": "iskys2k@gmail.com",
+    "numero": "97147563",
+    "roles": [
+        
+    ]
+}
+[m[32m2018-01-03 12:14:13.356 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 12:14:13.358 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    
+]
+[m[32m2018-01-03 12:14:13.476 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 12:14:13.480 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "itbrain",
+    "password": "pass",
+    "email": "hibrahimyya@gmail.com",
+    "nom": "Barriath Rahimi",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97950121"
+}
+[m[32m2018-01-03 12:14:13.518 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "iskys",
+    "password": "-1pehim8uycso5",
+    "email": "iskys2k@gmail.com",
+    "nom": "Iskyrou",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97147563"
+}
+[m[32m2018-01-03 12:14:13.548 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "username": "itbrain",
+        "password": "pass",
+        "email": "hibrahimyya@gmail.com",
+        "nom": "Barriath Rahimi",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "reset": false,
+        "userRoles": [
+            
+        ],
+        "numero": "97950121"
+    }
+]
+[m[32m2018-01-03 12:14:13.591 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 12:14:13.592 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "iskys",
+    "password": "-1pehim8uycso5",
+    "nom": "Iskyrou",
+    "email": "iskys2k@gmail.com",
+    "numero": "97147563",
+    "roles": null
+}
+[m[32m2018-01-03 12:14:13.641 WAT [main] c.b.UserControllerIntegrationTest DEBUG: true
+[m[32m2018-01-03 12:15:19.782 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "username": "itbrain",
+        "password": "pass",
+        "email": "hibrahimyya@gmail.com",
+        "nom": "Barriath Rahimi",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "reset": false,
+        "userRoles": [
+            
+        ],
+        "numero": "97950121"
+    }
+]
+[m[32m2018-01-03 12:16:55.185 WAT [main] c.b.UserControllerIntegrationTest DEBUG: true
+[m[32m2018-01-03 12:17:12.807 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "username": "itbrain",
+        "password": "pass",
+        "email": "hibrahimyya@gmail.com",
+        "nom": "Barriath Rahimi",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "reset": false,
+        "userRoles": [
+            
+        ],
+        "numero": "97950121"
+    }
+]
+[m[32m2018-01-03 12:20:06.341 WAT [main] c.b.UserControllerIntegrationTest DEBUG: true
+[m[32m2018-01-03 12:20:21.930 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "username": "itbrain",
+        "password": "pass",
+        "email": "hibrahimyya@gmail.com",
+        "nom": "Barriath Rahimi",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "reset": false,
+        "userRoles": [
+            
+        ],
+        "numero": "97950121"
+    }
+]
+[m[32m2018-01-03 12:20:59.679 WAT [main] c.b.a.Application INFO : Starting Application on itbrain with PID 6453 (/home/ibrahim/release4/bootcamp.user/target/classes started by ibrahim in /home/ibrahim/release4/bootcamp.user)
+[m[32m2018-01-03 12:20:59.683 WAT [main] c.b.a.Application DEBUG: Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+[m[32m2018-01-03 12:20:59.684 WAT [main] c.b.a.Application INFO : No active profile set, falling back to default profiles: default
+[m[32m2018-01-03 12:21:00.553 WAT [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext INFO : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2451a7c1: startup date [Wed Jan 03 12:21:00 WAT 2018]; root of context hierarchy
+[m[32m2018-01-03 12:21:04.055 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$c4f56d23] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 12:21:04.089 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$b96931c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 12:21:04.290 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 12:21:04.302 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheManagerCustomizers' of type [org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 12:21:04.307 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration' of type [org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration$$EnhancerBySpringCGLIB$$5b04a4a8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 12:21:04.317 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheManager' of type [org.springframework.cache.concurrent.ConcurrentMapCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 12:21:04.318 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheAutoConfigurationValidator' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 12:21:05.141 WAT [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer INFO : Tomcat initialized with port(s): 8091 (http)
+[m[32m2018-01-03 12:21:05.386 WAT [localhost-startStop-1] o.s.w.c.ContextLoader INFO : Root WebApplicationContext: initialization completed in 4833 ms
+[m[32m2018-01-03 12:21:05.785 WAT [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean INFO : Mapping servlet: 'dispatcherServlet' to [/]
+[m[32m2018-01-03 12:21:05.792 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'metricsFilter' to: [/*]
+[m[32m2018-01-03 12:21:05.793 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'characterEncodingFilter' to: [/*]
+[m[32m2018-01-03 12:21:05.793 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+[m[32m2018-01-03 12:21:05.794 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'applicationContextIdFilter' to: [/*]
+[m[32m2018-01-03 12:21:06.852 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/]}" onto public java.lang.String com.bootcamp.controllers.HomeController.index()
+[m[32m2018-01-03 12:21:06.862 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.update(com.bootcamp.commons.ws.usecases.pivotone.RoleWs) throws java.sql.SQLException
+[m[32m2018-01-03 12:21:06.863 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.commons.ws.usecases.pivotone.RoleWs>> com.bootcamp.controllers.RoleController.read() throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 12:21:06.864 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.read(int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 12:21:06.865 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.bootcamp.controllers.RoleController.delete(int) throws java.sql.SQLException
+[m[32m2018-01-03 12:21:06.866 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.create(com.bootcamp.commons.ws.usecases.pivotone.RoleWs) throws java.sql.SQLException
+[m[32m2018-01-03 12:21:06.872 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles/{idRole}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.UserWs> com.bootcamp.controllers.UserController.setRoleToUser(int,int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 12:21:06.873 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles/{idRole}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.UserWs> com.bootcamp.controllers.UserController.deleteRoleFromUser(int,int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 12:21:06.874 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.commons.ws.usecases.pivotone.RoleWs>> com.bootcamp.controllers.UserController.getUserRoles(int) throws java.sql.SQLException
+[m[32m2018-01-03 12:21:06.875 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.update(com.bootcamp.commons.ws.usecases.pivotone.UserWs) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 12:21:06.876 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.entities.PagUser>> com.bootcamp.controllers.UserController.read() throws java.sql.SQLException
+[m[32m2018-01-03 12:21:06.877 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.read(int) throws java.sql.SQLException
+[m[32m2018-01-03 12:21:06.878 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.bootcamp.controllers.UserController.delete(int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 12:21:06.879 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.create(com.bootcamp.commons.ws.usecases.pivotone.UserWs) throws java.sql.SQLException,java.io.IOException,javax.mail.MessagingException
+[m[32m2018-01-03 12:21:06.881 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+[m[32m2018-01-03 12:21:06.895 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[m[32m2018-01-03 12:21:06.897 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[m[32m2018-01-03 12:21:06.898 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[m[32m2018-01-03 12:21:06.908 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[m[32m2018-01-03 12:21:06.909 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[m[32m2018-01-03 12:21:07.476 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:21:07.478 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+[m[32m2018-01-03 12:21:07.479 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+[m[32m2018-01-03 12:21:07.481 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:21:07.482 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:21:07.483 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:21:07.484 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:21:07.488 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+[m[32m2018-01-03 12:21:07.489 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+[m[32m2018-01-03 12:21:07.489 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:21:07.491 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:21:07.493 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+[m[32m2018-01-03 12:21:07.493 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:21:07.495 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+[m[32m2018-01-03 12:21:07.496 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:21:07.498 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+[m[32m2018-01-03 12:21:07.498 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:21:08.065 WAT [main] o.s.w.s.h.SimpleUrlHandlerMapping INFO : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[m[32m2018-01-03 12:21:08.065 WAT [main] o.s.w.s.h.SimpleUrlHandlerMapping INFO : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[m[32m2018-01-03 12:21:08.194 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter INFO : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2451a7c1: startup date [Wed Jan 03 12:21:00 WAT 2018]; root of context hierarchy
+[m[33m2018-01-03 12:21:10.302 WAT [main] o.s.b.a.t.AbstractTemplateResolverConfiguration WARN : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+[m[32m2018-01-03 12:21:10.522 WAT [main] o.s.j.e.a.AnnotationMBeanExporter INFO : Registering beans for JMX exposure on startup
+[m[32m2018-01-03 12:21:10.534 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Registering beans for JMX exposure on startup
+[m[32m2018-01-03 12:21:10.543 WAT [main] o.s.c.s.DefaultLifecycleProcessor INFO : Starting beans in phase 0
+[m[32m2018-01-03 12:21:10.548 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'auditEventsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=auditEventsEndpoint]
+[m[32m2018-01-03 12:21:10.586 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+[m[32m2018-01-03 12:21:10.608 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+[m[32m2018-01-03 12:21:10.618 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+[m[32m2018-01-03 12:21:10.625 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+[m[32m2018-01-03 12:21:10.631 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+[m[32m2018-01-03 12:21:10.637 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'loggersEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=loggersEndpoint]
+[m[32m2018-01-03 12:21:10.649 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+[m[32m2018-01-03 12:21:10.655 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+[m[32m2018-01-03 12:21:10.661 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+[m[32m2018-01-03 12:21:10.667 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+[m[32m2018-01-03 12:21:10.673 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+[m[32m2018-01-03 12:21:10.676 WAT [main] o.s.c.s.DefaultLifecycleProcessor INFO : Starting beans in phase 2147483647
+[m[32m2018-01-03 12:21:11.441 WAT [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer INFO : Tomcat started on port(s): 8091 (http)
+[m[32m2018-01-03 12:21:11.453 WAT [main] c.b.a.Application INFO : Started Application in 12.625 seconds (JVM running for 33.831)
+[m[32m2018-01-03 12:22:27.469 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514978547231,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/users/1"
+}
+[mmpleted in 27 ms
+[m[32m2018-01-03 12:28:48.146 WAT [Thread-3] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext INFO : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2451a7c1: startup date [Wed Jan 03 12:21:00 WAT 2018]; root of context hierarchy
+[m[32m2018-01-03 12:28:48.154 WAT [Thread-3] o.s.c.s.DefaultLifecycleProcessor INFO : Stopping beans in phase 2147483647
+[m[32m2018-01-03 12:28:48.159 WAT [Thread-3] o.s.c.s.DefaultLifecycleProcessor INFO : Stopping beans in phase 0
+[m[32m2018-01-03 12:28:48.161 WAT [Thread-3] o.s.b.a.e.j.EndpointMBeanExporter INFO : Unregistering JMX-exposed beans on shutdown
+[m[32m2018-01-03 12:28:48.161 WAT [Thread-3] o.s.b.a.e.j.EndpointMBeanExporter INFO : Unregistering JMX-exposed beans
+[m[32m2018-01-03 12:28:48.162 WAT [Thread-3] o.s.j.e.a.AnnotationMBeanExporter INFO : Unregistering JMX-exposed beans on shutdown
+[m,
+    "username": "iskys",
+    "password": "-t4zjjw1pq3a4",
+    "nom": "Iskyrou",
+    "email": "iskys2k@gmail.com",
+    "numero": "97147563",
+    "roles": [
+        {
+            "id": 1,
+            "name": "ADMIN"
+        }
+    ]
+}
+[m[32m2018-01-03 12:23:40.220 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 12:23:40.224 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "name": "ADMIN"
+    }
+]
+[m[32m2018-01-03 12:23:40.489 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 12:23:40.493 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "itbrain",
+    "password": "pass",
+    "email": "hibrahimyya@gmail.com",
+    "nom": "Barriath Rahimi",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97950121"
+}
+[m[32m2018-01-03 12:23:40.559 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "itbrain",
+    "password": "pass",
+    "email": "hibrahimyya@gmail.com",
+    "nom": "Barriath Rahimi",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97950121"
+}
+[m[32m2018-01-03 12:23:40.616 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "username": "iskys",
+        "password": "-t4zjjw1pq3a4",
+        "email": "iskys2k@gmail.com",
+        "nom": "Iskyrou",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "reset": false,
+        "userRoles": [
+            
+        ],
+        "numero": "97147563"
+    }
+]
+[m[32m2018-01-03 12:23:40.687 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 12:23:40.688 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "iskys",
+    "password": "-t4zjjw1pq3a4",
+    "nom": "Iskyrou",
+    "email": "iskys2k@gmail.com",
+    "numero": "97147563",
+    "roles": null
+}
+[m[32m2018-01-03 12:23:40.899 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514978620887,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "javax.persistence.RollbackException",
+    "message": "Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd): org.eclipse.persistence.exceptions.DatabaseException\nInternal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`bootcamp`.`USERROLE`, CONSTRAINT `FK_USERROLE_PAGUSER_ID` FOREIGN KEY (`PAGUSER_ID`) REFERENCES `PAGUSER` (`ID`))\nError Code: 1451\nCall: DELETE FROM PAGUSER WHERE (ID = ?)\n\tbind => [1 parameter bound]\nQuery: DeleteObjectQuery(com.bootcamp.entities.PagUser@23fa9c97)",
+    "path": "/user/users/1"
+}
+[m[32m2018-01-03 12:29:13.233 WAT [main] c.b.a.Application INFO : Starting Application on itbrain with PID 6712 (/home/ibrahim/release4/bootcamp.user/target/classes started by ibrahim in /home/ibrahim/release4/bootcamp.user)
+[m[32m2018-01-03 12:29:13.236 WAT [main] c.b.a.Application DEBUG: Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+[m[32m2018-01-03 12:29:13.237 WAT [main] c.b.a.Application INFO : No active profile set, falling back to default profiles: default
+[m[32m2018-01-03 12:29:13.900 WAT [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext INFO : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c148e5c: startup date [Wed Jan 03 12:29:13 WAT 2018]; root of context hierarchy
+[m[32m2018-01-03 12:29:16.713 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$c5382712] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 12:29:16.758 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$b9abebb6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 12:29:16.904 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 12:29:16.925 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheManagerCustomizers' of type [org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 12:29:16.931 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration' of type [org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration$$EnhancerBySpringCGLIB$$5b475e97] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 12:29:16.946 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheManager' of type [org.springframework.cache.concurrent.ConcurrentMapCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 12:29:16.948 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheAutoConfigurationValidator' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 12:29:17.658 WAT [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer INFO : Tomcat initialized with port(s): 8091 (http)
+[m[32m2018-01-03 12:29:17.858 WAT [localhost-startStop-1] o.s.w.c.ContextLoader INFO : Root WebApplicationContext: initialization completed in 3958 ms
+[m[32m2018-01-03 12:29:18.275 WAT [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean INFO : Mapping servlet: 'dispatcherServlet' to [/]
+[m[32m2018-01-03 12:29:18.282 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'metricsFilter' to: [/*]
+[m[32m2018-01-03 12:29:18.283 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'characterEncodingFilter' to: [/*]
+[m[32m2018-01-03 12:29:18.283 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+[m[32m2018-01-03 12:29:18.283 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'applicationContextIdFilter' to: [/*]
+[m[32m2018-01-03 12:29:19.078 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/]}" onto public java.lang.String com.bootcamp.controllers.HomeController.index()
+[m[32m2018-01-03 12:29:19.086 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.update(com.bootcamp.commons.ws.usecases.pivotone.RoleWs) throws java.sql.SQLException
+[m[32m2018-01-03 12:29:19.087 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.commons.ws.usecases.pivotone.RoleWs>> com.bootcamp.controllers.RoleController.read() throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 12:29:19.088 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.read(int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 12:29:19.089 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.bootcamp.controllers.RoleController.delete(int) throws java.sql.SQLException
+[m[32m2018-01-03 12:29:19.090 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.create(com.bootcamp.commons.ws.usecases.pivotone.RoleWs) throws java.sql.SQLException
+[m[32m2018-01-03 12:29:19.095 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles/{idRole}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.UserWs> com.bootcamp.controllers.UserController.setRoleToUser(int,int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 12:29:19.096 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles/{idRole}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.UserWs> com.bootcamp.controllers.UserController.deleteRoleFromUser(int,int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 12:29:19.097 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.commons.ws.usecases.pivotone.RoleWs>> com.bootcamp.controllers.UserController.getUserRoles(int) throws java.sql.SQLException
+[m[32m2018-01-03 12:29:19.098 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.update(com.bootcamp.commons.ws.usecases.pivotone.UserWs) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 12:29:19.098 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.entities.PagUser>> com.bootcamp.controllers.UserController.read() throws java.sql.SQLException
+[m[32m2018-01-03 12:29:19.099 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.read(int) throws java.sql.SQLException
+[m[32m2018-01-03 12:29:19.100 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.bootcamp.controllers.UserController.delete(int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 12:29:19.101 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.create(com.bootcamp.commons.ws.usecases.pivotone.UserWs) throws java.sql.SQLException,java.io.IOException,javax.mail.MessagingException
+[m[32m2018-01-03 12:29:19.102 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+[m[32m2018-01-03 12:29:19.115 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[m[32m2018-01-03 12:29:19.116 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[m[32m2018-01-03 12:29:19.117 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[m[32m2018-01-03 12:29:19.124 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[m[32m2018-01-03 12:29:19.125 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[m[32m2018-01-03 12:29:19.598 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+[m[32m2018-01-03 12:29:19.600 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+[m[32m2018-01-03 12:29:19.600 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:29:19.601 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:29:19.603 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:29:19.605 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+[m[32m2018-01-03 12:29:19.605 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:29:19.607 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:29:19.608 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:29:19.610 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:29:19.612 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:29:19.613 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:29:19.615 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+[m[32m2018-01-03 12:29:19.617 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+[m[32m2018-01-03 12:29:19.618 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 12:29:19.619 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+[m[32m2018-01-03 12:29:19.621 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+[m[32m2018-01-03 12:29:19.970 WAT [main] o.s.w.s.h.SimpleUrlHandlerMapping INFO : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[m[32m2018-01-03 12:29:19.971 WAT [main] o.s.w.s.h.SimpleUrlHandlerMapping INFO : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[m[32m2018-01-03 12:29:20.068 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter INFO : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c148e5c: startup date [Wed Jan 03 12:29:13 WAT 2018]; root of context hierarchy
+[m[33m2018-01-03 12:29:21.948 WAT [main] o.s.b.a.t.AbstractTemplateResolverConfiguration WARN : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+[m[32m2018-01-03 12:29:22.154 WAT [main] o.s.j.e.a.AnnotationMBeanExporter INFO : Registering beans for JMX exposure on startup
+[m[32m2018-01-03 12:29:22.173 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Registering beans for JMX exposure on startup
+[m[32m2018-01-03 12:29:22.182 WAT [main] o.s.c.s.DefaultLifecycleProcessor INFO : Starting beans in phase 0
+[m[32m2018-01-03 12:29:22.187 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'auditEventsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=auditEventsEndpoint]
+[m[32m2018-01-03 12:29:22.215 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+[m[32m2018-01-03 12:29:22.237 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+[m[32m2018-01-03 12:29:22.246 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+[m[32m2018-01-03 12:29:22.252 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+[m[32m2018-01-03 12:29:22.258 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+[m[32m2018-01-03 12:29:22.264 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'loggersEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=loggersEndpoint]
+[m[32m2018-01-03 12:29:22.276 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+[m[32m2018-01-03 12:29:22.282 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+[m[32m2018-01-03 12:29:22.287 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+[m[32m2018-01-03 12:29:22.293 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+[m[32m2018-01-03 12:29:22.299 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+[m[32m2018-01-03 12:29:22.303 WAT [main] o.s.c.s.DefaultLifecycleProcessor INFO : Starting beans in phase 2147483647
+[m[32m2018-01-03 12:29:23.000 WAT [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer INFO : Tomcat started on port(s): 8091 (http)
+[m[32m2018-01-03 12:29:23.013 WAT [main] c.b.a.Application INFO : Started Application in 10.702 seconds (JVM running for 26.639)
+[m[32m2018-01-03 12:30:54.674 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514979053985,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/users/1"
+}
+[mmpleted in 50 ms
+[m[32m2018-01-03 13:48:53.715 WAT [Thread-3] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext INFO : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c148e5c: startup date [Wed Jan 03 12:29:13 WAT 2018]; root of context hierarchy
+[m[32m2018-01-03 13:48:53.722 WAT [Thread-3] o.s.c.s.DefaultLifecycleProcessor INFO : Stopping beans in phase 2147483647
+[m[32m2018-01-03 13:48:53.735 WAT [Thread-3] o.s.c.s.DefaultLifecycleProcessor INFO : Stopping beans in phase 0
+[m[32m2018-01-03 13:48:53.736 WAT [Thread-3] o.s.b.a.e.j.EndpointMBeanExporter INFO : Unregistering JMX-exposed beans on shutdown
+[m[32m2018-01-03 13:48:53.737 WAT [Thread-3] o.s.b.a.e.j.EndpointMBeanExporter INFO : Unregistering JMX-exposed beans
+[m[32m2018-01-03 13:48:53.737 WAT [Thread-3] o.s.j.e.a.AnnotationMBeanExporter INFO : Unregistering JMX-exposed beans on shutdown
+[m "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/users/1/roles/1"
+}
+[m[32m2018-01-03 12:32:00.059 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 12:32:00.062 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514979120054,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/users/1/roles"
+}
+[m[32m2018-01-03 12:32:00.140 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 12:32:00.143 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "itbrain",
+    "password": "pass",
+    "email": "hibrahimyya@gmail.com",
+    "nom": "Barriath Rahimi",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97950121"
+}
+[m[32m2018-01-03 12:32:00.209 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514979120203,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/users/1"
+}
+[m[32m2018-01-03 12:32:00.265 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    
+]
+[m[32m2018-01-03 12:32:00.371 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 12:32:00.375 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "itbrain",
+    "password": "pass",
+    "nom": "Barriath Rahimi",
+    "email": "hibrahimyya@gmail.com",
+    "numero": "97950121",
+    "roles": null
+}
+[m[32m2018-01-03 12:32:00.420 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514979120416,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/users/1"
+}
+[m[32m2018-01-03 12:35:28.972 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    
+]
+[m[32m2018-01-03 12:35:48.875 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "name": "ADMIN"
+    }
+]
+[m[32m2018-01-03 12:36:30.212 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "name": "ADMIN"
+}
+[m[32m2018-01-03 12:42:15.839 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "name": "ADMIN"
+    }
+]
+[m[32m2018-01-03 13:47:03.865 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514983623642,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "javax.persistence.RollbackException",
+    "message": "Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd): org.eclipse.persistence.exceptions.DatabaseException\nInternal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`bootcamp`.`USERROLE`, CONSTRAINT `FK_USERROLE_PAGUSER_ID` FOREIGN KEY (`PAGUSER_ID`) REFERENCES `PAGUSER` (`ID`))\nError Code: 1451\nCall: DELETE FROM PAGUSER WHERE (ID = ?)\n\tbind => [1 parameter bound]\nQuery: DeleteObjectQuery(com.bootcamp.entities.PagUser@6d048c0e)",
+    "path": "/user/users/2"
+}
+[m[32m2018-01-03 13:49:20.119 WAT [main] c.b.a.Application INFO : Starting Application on itbrain with PID 7538 (/home/ibrahim/release4/bootcamp.user/target/classes started by ibrahim in /home/ibrahim/release4/bootcamp.user)
+[m[32m2018-01-03 13:49:20.122 WAT [main] c.b.a.Application DEBUG: Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+[m[32m2018-01-03 13:49:20.123 WAT [main] c.b.a.Application INFO : No active profile set, falling back to default profiles: default
+[m[32m2018-01-03 13:49:20.746 WAT [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext INFO : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75383467: startup date [Wed Jan 03 13:49:20 WAT 2018]; root of context hierarchy
+[m[32m2018-01-03 13:49:23.892 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$7d26276e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 13:49:23.931 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$7199ec12] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 13:49:24.105 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 13:49:24.120 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheManagerCustomizers' of type [org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 13:49:24.123 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration' of type [org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration$$EnhancerBySpringCGLIB$$13355ef3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 13:49:24.137 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheManager' of type [org.springframework.cache.concurrent.ConcurrentMapCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 13:49:24.138 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheAutoConfigurationValidator' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 13:49:24.937 WAT [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer INFO : Tomcat initialized with port(s): 8091 (http)
+[m[32m2018-01-03 13:49:25.117 WAT [localhost-startStop-1] o.s.w.c.ContextLoader INFO : Root WebApplicationContext: initialization completed in 4372 ms
+[m[32m2018-01-03 13:49:25.562 WAT [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean INFO : Mapping servlet: 'dispatcherServlet' to [/]
+[m[32m2018-01-03 13:49:25.569 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'metricsFilter' to: [/*]
+[m[32m2018-01-03 13:49:25.570 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'characterEncodingFilter' to: [/*]
+[m[32m2018-01-03 13:49:25.570 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+[m[32m2018-01-03 13:49:25.570 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'applicationContextIdFilter' to: [/*]
+[m[32m2018-01-03 13:49:26.848 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/]}" onto public java.lang.String com.bootcamp.controllers.HomeController.index()
+[m[32m2018-01-03 13:49:26.856 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.update(com.bootcamp.commons.ws.usecases.pivotone.RoleWs) throws java.sql.SQLException
+[m[32m2018-01-03 13:49:26.857 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.commons.ws.usecases.pivotone.RoleWs>> com.bootcamp.controllers.RoleController.read() throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 13:49:26.858 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.read(int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 13:49:26.859 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.bootcamp.controllers.RoleController.delete(int) throws java.sql.SQLException
+[m[32m2018-01-03 13:49:26.860 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.create(com.bootcamp.commons.ws.usecases.pivotone.RoleWs) throws java.sql.SQLException
+[m[32m2018-01-03 13:49:26.866 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles/{idRole}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.UserWs> com.bootcamp.controllers.UserController.setRoleToUser(int,int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 13:49:26.867 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles/{idRole}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.UserWs> com.bootcamp.controllers.UserController.deleteRoleFromUser(int,int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 13:49:26.868 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.commons.ws.usecases.pivotone.RoleWs>> com.bootcamp.controllers.UserController.getUserRoles(int) throws java.sql.SQLException
+[m[32m2018-01-03 13:49:26.869 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.update(com.bootcamp.commons.ws.usecases.pivotone.UserWs) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 13:49:26.869 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.entities.PagUser>> com.bootcamp.controllers.UserController.read() throws java.sql.SQLException
+[m[32m2018-01-03 13:49:26.870 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.read(int) throws java.sql.SQLException
+[m[32m2018-01-03 13:49:26.871 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.bootcamp.controllers.UserController.delete(int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 13:49:26.872 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.create(com.bootcamp.commons.ws.usecases.pivotone.UserWs) throws java.sql.SQLException,java.io.IOException,javax.mail.MessagingException
+[m[32m2018-01-03 13:49:26.874 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+[m[32m2018-01-03 13:49:26.886 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[m[32m2018-01-03 13:49:26.888 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[m[32m2018-01-03 13:49:26.889 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[m[32m2018-01-03 13:49:26.896 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[m[32m2018-01-03 13:49:26.897 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[m[32m2018-01-03 13:49:27.454 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 13:49:27.456 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 13:49:27.457 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 13:49:27.459 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+[m[32m2018-01-03 13:49:27.461 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 13:49:27.462 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+[m[32m2018-01-03 13:49:27.464 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+[m[32m2018-01-03 13:49:27.465 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 13:49:27.467 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+[m[32m2018-01-03 13:49:27.471 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+[m[32m2018-01-03 13:49:27.472 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+[m[32m2018-01-03 13:49:27.472 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 13:49:27.473 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 13:49:27.475 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 13:49:27.476 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 13:49:27.477 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+[m[32m2018-01-03 13:49:27.477 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 13:49:28.016 WAT [main] o.s.w.s.h.SimpleUrlHandlerMapping INFO : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[m[32m2018-01-03 13:49:28.016 WAT [main] o.s.w.s.h.SimpleUrlHandlerMapping INFO : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[m[32m2018-01-03 13:49:28.138 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter INFO : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75383467: startup date [Wed Jan 03 13:49:20 WAT 2018]; root of context hierarchy
+[m[33m2018-01-03 13:49:29.392 WAT [main] o.s.b.a.t.AbstractTemplateResolverConfiguration WARN : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+[m[32m2018-01-03 13:49:29.627 WAT [main] o.s.j.e.a.AnnotationMBeanExporter INFO : Registering beans for JMX exposure on startup
+[m[32m2018-01-03 13:49:29.639 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Registering beans for JMX exposure on startup
+[m[32m2018-01-03 13:49:29.649 WAT [main] o.s.c.s.DefaultLifecycleProcessor INFO : Starting beans in phase 0
+[m[32m2018-01-03 13:49:29.653 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'auditEventsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=auditEventsEndpoint]
+[m[32m2018-01-03 13:49:29.684 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+[m[32m2018-01-03 13:49:29.706 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+[m[32m2018-01-03 13:49:29.716 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+[m[32m2018-01-03 13:49:29.722 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+[m[32m2018-01-03 13:49:29.727 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+[m[32m2018-01-03 13:49:29.733 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'loggersEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=loggersEndpoint]
+[m[32m2018-01-03 13:49:29.744 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+[m[32m2018-01-03 13:49:29.750 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+[m[32m2018-01-03 13:49:29.755 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+[m[32m2018-01-03 13:49:29.760 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+[m[32m2018-01-03 13:49:29.764 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+[m[32m2018-01-03 13:49:29.768 WAT [main] o.s.c.s.DefaultLifecycleProcessor INFO : Starting beans in phase 2147483647
+[m[32m2018-01-03 13:49:30.502 WAT [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer INFO : Tomcat started on port(s): 8091 (http)
+[m[32m2018-01-03 13:49:30.516 WAT [main] c.b.a.Application INFO : Started Application in 11.147 seconds (JVM running for 33.914)
+[m[32m2018-01-03 13:51:46.710 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514983906398,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/users/2"
+}
+[mmpleted in 17 ms
+[m[32m2018-01-03 14:03:07.905 WAT [Thread-3] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext INFO : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75383467: startup date [Wed Jan 03 13:49:20 WAT 2018]; root of context hierarchy
+[m[32m2018-01-03 14:03:07.912 WAT [Thread-3] o.s.c.s.DefaultLifecycleProcessor INFO : Stopping beans in phase 2147483647
+[m[32m2018-01-03 14:03:07.919 WAT [Thread-3] o.s.c.s.DefaultLifecycleProcessor INFO : Stopping beans in phase 0
+[m[32m2018-01-03 14:03:07.920 WAT [Thread-3] o.s.b.a.e.j.EndpointMBeanExporter INFO : Unregistering JMX-exposed beans on shutdown
+[m[32m2018-01-03 14:03:07.920 WAT [Thread-3] o.s.b.a.e.j.EndpointMBeanExporter INFO : Unregistering JMX-exposed beans
+[m[32m2018-01-03 14:03:07.921 WAT [Thread-3] o.s.j.e.a.AnnotationMBeanExporter INFO : Unregistering JMX-exposed beans on shutdown
+[mmp": 1514984006451,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "javax.persistence.RollbackException",
+    "message": "Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd): org.eclipse.persistence.exceptions.DatabaseException\nInternal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`bootcamp`.`USERROLE`, CONSTRAINT `FK_USERROLE_PAGUSER_ID` FOREIGN KEY (`PAGUSER_ID`) REFERENCES `PAGUSER` (`ID`))\nError Code: 1452\nCall: INSERT INTO USERROLE (PAGROLE_ID, PAGUSER_ID) VALUES (?, ?)\n\tbind => [2 parameters bound]\nQuery: InsertObjectQuery(com.bootcamp.entities.UserRole@6c48f8f2)",
+    "path": "/user/users/1/roles/1"
+}
+[m[32m2018-01-03 13:53:26.566 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 13:53:26.569 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514984006560,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/users/1/roles"
+}
+[m[32m2018-01-03 13:53:26.727 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 13:53:26.729 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "itbrain",
+    "password": "pass",
+    "email": "hibrahimyya@gmail.com",
+    "nom": "Barriath Rahimi",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97950121"
+}
+[m[32m2018-01-03 13:53:26.779 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "iskys",
+    "password": "5pe0gjazdk8n",
+    "email": "iskys2k@gmail.com",
+    "nom": "Iskyrou",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97147563"
+}
+[m[32m2018-01-03 13:53:26.821 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "username": "itbrain",
+        "password": "pass",
+        "email": "hibrahimyya@gmail.com",
+        "nom": "Barriath Rahimi",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "reset": false,
+        "userRoles": [
+            
+        ],
+        "numero": "97950121"
+    }
+]
+[m[32m2018-01-03 13:53:26.874 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 13:53:26.876 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "itbrain",
+    "password": "pass",
+    "nom": "Barriath Rahimi",
+    "email": "hibrahimyya@gmail.com",
+    "numero": "97950121",
+    "roles": null
+}
+[m[32m2018-01-03 13:53:26.921 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514984006915,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/users/2"
+}
+[m[32m2018-01-03 14:03:28.828 WAT [main] c.b.a.Application INFO : Starting Application on itbrain with PID 7970 (/home/ibrahim/release4/bootcamp.user/target/classes started by ibrahim in /home/ibrahim/release4/bootcamp.user)
+[m[32m2018-01-03 14:03:28.837 WAT [main] c.b.a.Application DEBUG: Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+[m[32m2018-01-03 14:03:28.838 WAT [main] c.b.a.Application INFO : No active profile set, falling back to default profiles: default
+[m[32m2018-01-03 14:03:29.970 WAT [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext INFO : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c3b122f: startup date [Wed Jan 03 14:03:29 WAT 2018]; root of context hierarchy
+[m[32m2018-01-03 14:03:33.051 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$9d866e47] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 14:03:33.094 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$91fa32eb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 14:03:33.257 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 14:03:33.277 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheManagerCustomizers' of type [org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 14:03:33.283 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration' of type [org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration$$EnhancerBySpringCGLIB$$3395a5cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 14:03:33.295 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheManager' of type [org.springframework.cache.concurrent.ConcurrentMapCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 14:03:33.296 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheAutoConfigurationValidator' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 14:03:34.121 WAT [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer INFO : Tomcat initialized with port(s): 8091 (http)
+[m[32m2018-01-03 14:03:34.369 WAT [localhost-startStop-1] o.s.w.c.ContextLoader INFO : Root WebApplicationContext: initialization completed in 4398 ms
+[m[32m2018-01-03 14:03:34.722 WAT [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean INFO : Mapping servlet: 'dispatcherServlet' to [/]
+[m[32m2018-01-03 14:03:34.727 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'metricsFilter' to: [/*]
+[m[32m2018-01-03 14:03:34.728 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'characterEncodingFilter' to: [/*]
+[m[32m2018-01-03 14:03:34.728 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+[m[32m2018-01-03 14:03:34.728 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'applicationContextIdFilter' to: [/*]
+[m[32m2018-01-03 14:03:35.656 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/]}" onto public java.lang.String com.bootcamp.controllers.HomeController.index()
+[m[32m2018-01-03 14:03:35.663 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.update(com.bootcamp.commons.ws.usecases.pivotone.RoleWs) throws java.sql.SQLException
+[m[32m2018-01-03 14:03:35.664 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.commons.ws.usecases.pivotone.RoleWs>> com.bootcamp.controllers.RoleController.read() throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 14:03:35.665 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.read(int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 14:03:35.666 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.bootcamp.controllers.RoleController.delete(int) throws java.sql.SQLException
+[m[32m2018-01-03 14:03:35.667 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.create(com.bootcamp.commons.ws.usecases.pivotone.RoleWs) throws java.sql.SQLException
+[m[32m2018-01-03 14:03:35.673 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles/{idRole}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.UserWs> com.bootcamp.controllers.UserController.setRoleToUser(int,int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 14:03:35.674 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles/{idRole}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.UserWs> com.bootcamp.controllers.UserController.deleteRoleFromUser(int,int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 14:03:35.675 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.commons.ws.usecases.pivotone.RoleWs>> com.bootcamp.controllers.UserController.getUserRoles(int) throws java.sql.SQLException
+[m[32m2018-01-03 14:03:35.676 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.update(com.bootcamp.commons.ws.usecases.pivotone.UserWs) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 14:03:35.677 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.entities.PagUser>> com.bootcamp.controllers.UserController.read() throws java.sql.SQLException
+[m[32m2018-01-03 14:03:35.677 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.read(int) throws java.sql.SQLException
+[m[32m2018-01-03 14:03:35.678 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.bootcamp.controllers.UserController.delete(int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 14:03:35.679 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.create(com.bootcamp.commons.ws.usecases.pivotone.UserWs) throws java.sql.SQLException,java.io.IOException,javax.mail.MessagingException
+[m[32m2018-01-03 14:03:35.681 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+[m[32m2018-01-03 14:03:35.693 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[m[32m2018-01-03 14:03:35.695 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[m[32m2018-01-03 14:03:35.696 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[m[32m2018-01-03 14:03:35.704 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[m[32m2018-01-03 14:03:35.705 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[m[32m2018-01-03 14:03:36.178 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:03:36.179 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:03:36.181 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:03:36.182 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+[m[32m2018-01-03 14:03:36.183 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:03:36.184 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:03:36.186 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+[m[32m2018-01-03 14:03:36.188 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+[m[32m2018-01-03 14:03:36.189 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:03:36.190 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:03:36.192 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+[m[32m2018-01-03 14:03:36.196 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+[m[32m2018-01-03 14:03:36.197 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+[m[32m2018-01-03 14:03:36.197 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:03:36.198 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:03:36.199 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+[m[32m2018-01-03 14:03:36.200 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:03:36.710 WAT [main] o.s.w.s.h.SimpleUrlHandlerMapping INFO : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[m[32m2018-01-03 14:03:36.711 WAT [main] o.s.w.s.h.SimpleUrlHandlerMapping INFO : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[m[32m2018-01-03 14:03:36.820 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter INFO : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c3b122f: startup date [Wed Jan 03 14:03:29 WAT 2018]; root of context hierarchy
+[m[33m2018-01-03 14:03:38.123 WAT [main] o.s.b.a.t.AbstractTemplateResolverConfiguration WARN : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+[m[32m2018-01-03 14:03:38.268 WAT [main] o.s.j.e.a.AnnotationMBeanExporter INFO : Registering beans for JMX exposure on startup
+[m[32m2018-01-03 14:03:38.278 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Registering beans for JMX exposure on startup
+[m[32m2018-01-03 14:03:38.284 WAT [main] o.s.c.s.DefaultLifecycleProcessor INFO : Starting beans in phase 0
+[m[32m2018-01-03 14:03:38.287 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'auditEventsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=auditEventsEndpoint]
+[m[32m2018-01-03 14:03:38.308 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+[m[32m2018-01-03 14:03:38.325 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+[m[32m2018-01-03 14:03:38.334 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+[m[32m2018-01-03 14:03:38.340 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+[m[32m2018-01-03 14:03:38.346 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+[m[32m2018-01-03 14:03:38.354 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'loggersEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=loggersEndpoint]
+[m[32m2018-01-03 14:03:38.366 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+[m[32m2018-01-03 14:03:38.372 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+[m[32m2018-01-03 14:03:38.377 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+[m[32m2018-01-03 14:03:38.383 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+[m[32m2018-01-03 14:03:38.387 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+[m[32m2018-01-03 14:03:38.391 WAT [main] o.s.c.s.DefaultLifecycleProcessor INFO : Starting beans in phase 2147483647
+[m[32m2018-01-03 14:03:39.854 WAT [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer INFO : Tomcat started on port(s): 8091 (http)
+[m[32m2018-01-03 14:03:39.865 WAT [main] c.b.a.Application INFO : Started Application in 12.076 seconds (JVM running for 29.748)
+[m[32m2018-01-03 14:04:15.874 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 14:04:15.894 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "iskys",
+    "password": "-ralg2gpvuiaq",
+    "email": "iskys2k@gmail.com",
+    "nom": "Iskyrou",
+    "dateCreation": 0[32m2018-01-03 14:10:59.614 WAT [Thread-3] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext INFO : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c3b122f: startup date [Wed Jan 03 14:03:29 WAT 2018]; root of context hierarchy
+[m[32m2018-01-03 14:10:59.620 WAT [Thread-3] o.s.c.s.DefaultLifecycleProcessor INFO : Stopping beans in phase 2147483647
+[m[32m2018-01-03 14:10:59.622 WAT [Thread-3] o.s.c.s.DefaultLifecycleProcessor INFO : Stopping beans in phase 0
+[m[32m2018-01-03 14:10:59.623 WAT [Thread-3] o.s.b.a.e.j.EndpointMBeanExporter INFO : Unregistering JMX-exposed beans on shutdown
+[m[32m2018-01-03 14:10:59.623 WAT [Thread-3] o.s.b.a.e.j.EndpointMBeanExporter INFO : Unregistering JMX-exposed beans
+[m[32m2018-01-03 14:10:59.624 WAT [Thread-3] o.s.j.e.a.AnnotationMBeanExporter INFO : Unregistering JMX-exposed beans on shutdown
+[m] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 14:04:59.744 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514984699736,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/users/1/roles"
+}
+[m[32m2018-01-03 14:05:20.960 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 14:05:20.965 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "itbrain",
+    "password": "pass",
+    "email": "hibrahimyya@gmail.com",
+    "nom": "Barriath Rahimi",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97950121"
+}
+[m[32m2018-01-03 14:05:21.016 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "itbrain",
+    "password": "pass",
+    "email": "hibrahimyya@gmail.com",
+    "nom": "Barriath Rahimi",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97950121"
+}
+[m[32m2018-01-03 14:05:21.065 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "username": "itbrain",
+        "password": "pass",
+        "email": "hibrahimyya@gmail.com",
+        "nom": "Barriath Rahimi",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "reset": false,
+        "userRoles": [
+            
+        ],
+        "numero": "97950121"
+    }
+]
+[m[32m2018-01-03 14:05:21.191 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 14:05:21.193 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "itbrain",
+    "password": "pass",
+    "nom": "Barriath Rahimi",
+    "email": "hibrahimyya@gmail.com",
+    "numero": "97950121",
+    "roles": null
+}
+[m[32m2018-01-03 14:05:21.236 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514984721232,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/users/2"
+}
+[m[32m2018-01-03 14:11:11.968 WAT [main] c.b.a.Application INFO : Starting Application on itbrain with PID 8138 (/home/ibrahim/release4/bootcamp.user/target/classes started by ibrahim in /home/ibrahim/release4/bootcamp.user)
+[m[32m2018-01-03 14:11:11.971 WAT [main] c.b.a.Application DEBUG: Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+[m[32m2018-01-03 14:11:11.972 WAT [main] c.b.a.Application INFO : No active profile set, falling back to default profiles: default
+[m[32m2018-01-03 14:11:12.497 WAT [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext INFO : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c8ca14f: startup date [Wed Jan 03 14:11:12 WAT 2018]; root of context hierarchy
+[m[32m2018-01-03 14:11:14.937 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$cac0e2ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 14:11:14.976 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$bf34a75e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 14:11:15.104 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 14:11:15.120 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheManagerCustomizers' of type [org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 14:11:15.125 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration' of type [org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration$$EnhancerBySpringCGLIB$$60d01a3f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 14:11:15.137 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheManager' of type [org.springframework.cache.concurrent.ConcurrentMapCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 14:11:15.138 WAT [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker INFO : Bean 'cacheAutoConfigurationValidator' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[m[32m2018-01-03 14:11:15.724 WAT [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer INFO : Tomcat initialized with port(s): 8091 (http)
+[m[32m2018-01-03 14:11:15.923 WAT [localhost-startStop-1] o.s.w.c.ContextLoader INFO : Root WebApplicationContext: initialization completed in 3426 ms
+[m[32m2018-01-03 14:11:16.269 WAT [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean INFO : Mapping servlet: 'dispatcherServlet' to [/]
+[m[32m2018-01-03 14:11:16.276 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'metricsFilter' to: [/*]
+[m[32m2018-01-03 14:11:16.277 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'characterEncodingFilter' to: [/*]
+[m[32m2018-01-03 14:11:16.277 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+[m[32m2018-01-03 14:11:16.277 WAT [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean INFO : Mapping filter: 'applicationContextIdFilter' to: [/*]
+[m[32m2018-01-03 14:11:17.113 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/]}" onto public java.lang.String com.bootcamp.controllers.HomeController.index()
+[m[32m2018-01-03 14:11:17.122 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.update(com.bootcamp.commons.ws.usecases.pivotone.RoleWs) throws java.sql.SQLException
+[m[32m2018-01-03 14:11:17.123 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.commons.ws.usecases.pivotone.RoleWs>> com.bootcamp.controllers.RoleController.read() throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 14:11:17.124 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.read(int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 14:11:17.125 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.bootcamp.controllers.RoleController.delete(int) throws java.sql.SQLException
+[m[32m2018-01-03 14:11:17.126 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/roles],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.RoleWs> com.bootcamp.controllers.RoleController.create(com.bootcamp.commons.ws.usecases.pivotone.RoleWs) throws java.sql.SQLException
+[m[32m2018-01-03 14:11:17.132 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles/{idRole}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.UserWs> com.bootcamp.controllers.UserController.setRoleToUser(int,int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 14:11:17.134 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles/{idRole}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.commons.ws.usecases.pivotone.UserWs> com.bootcamp.controllers.UserController.deleteRoleFromUser(int,int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 14:11:17.134 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{idUser}/roles],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.commons.ws.usecases.pivotone.RoleWs>> com.bootcamp.controllers.UserController.getUserRoles(int) throws java.sql.SQLException
+[m[32m2018-01-03 14:11:17.135 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.update(com.bootcamp.commons.ws.usecases.pivotone.UserWs) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 14:11:17.136 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.bootcamp.entities.PagUser>> com.bootcamp.controllers.UserController.read() throws java.sql.SQLException
+[m[32m2018-01-03 14:11:17.137 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.read(int) throws java.sql.SQLException
+[m[32m2018-01-03 14:11:17.138 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.bootcamp.controllers.UserController.delete(int) throws java.sql.SQLException,java.io.IOException
+[m[32m2018-01-03 14:11:17.139 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/users],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.bootcamp.entities.PagUser> com.bootcamp.controllers.UserController.create(com.bootcamp.commons.ws.usecases.pivotone.UserWs) throws java.sql.SQLException,java.io.IOException,javax.mail.MessagingException
+[m[32m2018-01-03 14:11:17.141 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+[m[32m2018-01-03 14:11:17.155 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[m[32m2018-01-03 14:11:17.156 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[m[32m2018-01-03 14:11:17.157 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[m[32m2018-01-03 14:11:17.167 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[m[32m2018-01-03 14:11:17.168 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping INFO : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[m[32m2018-01-03 14:11:17.756 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:11:17.757 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:11:17.760 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+[m[32m2018-01-03 14:11:17.761 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:11:17.763 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+[m[32m2018-01-03 14:11:17.765 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:11:17.767 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+[m[32m2018-01-03 14:11:17.768 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:11:17.770 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+[m[32m2018-01-03 14:11:17.770 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:11:17.772 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:11:17.773 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+[m[32m2018-01-03 14:11:17.775 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:11:17.776 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:11:17.780 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+[m[32m2018-01-03 14:11:17.781 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+[m[32m2018-01-03 14:11:17.781 WAT [main] o.s.b.a.e.m.EndpointHandlerMapping INFO : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[m[32m2018-01-03 14:11:18.209 WAT [main] o.s.w.s.h.SimpleUrlHandlerMapping INFO : Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[m[32m2018-01-03 14:11:18.209 WAT [main] o.s.w.s.h.SimpleUrlHandlerMapping INFO : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[m[32m2018-01-03 14:11:18.307 WAT [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter INFO : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c8ca14f: startup date [Wed Jan 03 14:11:12 WAT 2018]; root of context hierarchy
+[m[33m2018-01-03 14:11:20.006 WAT [main] o.s.b.a.t.AbstractTemplateResolverConfiguration WARN : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+[m[32m2018-01-03 14:11:20.211 WAT [main] o.s.j.e.a.AnnotationMBeanExporter INFO : Registering beans for JMX exposure on startup
+[m[32m2018-01-03 14:11:20.225 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Registering beans for JMX exposure on startup
+[m[32m2018-01-03 14:11:20.234 WAT [main] o.s.c.s.DefaultLifecycleProcessor INFO : Starting beans in phase 0
+[m[32m2018-01-03 14:11:20.238 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'auditEventsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=auditEventsEndpoint]
+[m[32m2018-01-03 14:11:20.268 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+[m[32m2018-01-03 14:11:20.290 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+[m[32m2018-01-03 14:11:20.300 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+[m[32m2018-01-03 14:11:20.306 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+[m[32m2018-01-03 14:11:20.313 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+[m[32m2018-01-03 14:11:20.319 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'loggersEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=loggersEndpoint]
+[m[32m2018-01-03 14:11:20.330 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+[m[32m2018-01-03 14:11:20.336 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+[m[32m2018-01-03 14:11:20.341 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+[m[32m2018-01-03 14:11:20.347 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+[m[32m2018-01-03 14:11:20.353 WAT [main] o.s.b.a.e.j.EndpointMBeanExporter INFO : Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+[m[32m2018-01-03 14:11:20.357 WAT [main] o.s.c.s.DefaultLifecycleProcessor INFO : Starting beans in phase 2147483647
+[m[32m2018-01-03 14:11:21.023 WAT [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer INFO : Tomcat started on port(s): 8091 (http)
+[m[32m2018-01-03 14:11:21.035 WAT [main] c.b.a.Application INFO : Started Application in 9.703 seconds (JVM running for 18.489)
+[m[32m2018-01-03 14:14:23.064 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    
+]
+[meworkServlet 'dispatcherServlet': initialization started
+[m[32m2018-01-03 14:13:59.928 WAT [http-nio-8091-exec-2] o.s.w.s.DispatcherServlet INFO : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+[m[32m2018-01-03 14:52:11.002 WAT [Thread-3] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext INFO : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c8ca14f: startup date [Wed Jan 03 14:11:12 WAT 2018]; root of context hierarchy
+[m[32m2018-01-03 14:52:11.127 WAT [Thread-3] o.s.c.s.DefaultLifecycleProcessor INFO : Stopping beans in phase 2147483647
+[m[32m2018-01-03 14:52:11.198 WAT [Thread-3] o.s.c.s.DefaultLifecycleProcessor INFO : Stopping beans in phase 0
+[m[32m2018-01-03 14:52:11.199 WAT [Thread-3] o.s.b.a.e.j.EndpointMBeanExporter INFO : Unregistering JMX-exposed beans on shutdown
+[m[32m2018-01-03 14:52:11.200 WAT [Thread-3] o.s.b.a.e.j.EndpointMBeanExporter INFO : Unregistering JMX-exposed beans
+[m[32m2018-01-03 14:52:11.200 WAT [Thread-3] o.s.j.e.a.AnnotationMBeanExporter INFO : Unregistering JMX-exposed beans on shutdown
+[m: "iskys2k@gmail.com",
+    "numero": "97147563",
+    "roles": [
+        
+    ]
+}
+[m[32m2018-01-03 14:16:22.250 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 14:16:22.251 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    
+]
+[m[32m2018-01-03 14:16:22.500 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 14:16:22.502 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "itbrain",
+    "password": "pass",
+    "email": "hibrahimyya@gmail.com",
+    "nom": "Barriath Rahimi",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97950121"
+}
+[m[32m2018-01-03 14:16:22.556 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "iskys",
+    "password": "-3t2s54ymvpze",
+    "email": "iskys2k@gmail.com",
+    "nom": "Iskyrou",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97147563"
+}
+[m[32m2018-01-03 14:16:22.624 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "username": "iskys",
+        "password": "-3t2s54ymvpze",
+        "email": "iskys2k@gmail.com",
+        "nom": "Iskyrou",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "reset": false,
+        "userRoles": [
+            
+        ],
+        "numero": "97147563"
+    }
+]
+[m[32m2018-01-03 14:16:22.666 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 1
+[m[32m2018-01-03 14:16:22.669 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 1,
+    "username": "iskys",
+    "password": "-3t2s54ymvpze",
+    "nom": "Iskyrou",
+    "email": "iskys2k@gmail.com",
+    "numero": "97147563",
+    "roles": null
+}
+[m[32m2018-01-03 14:16:22.838 WAT [main] c.b.UserControllerIntegrationTest DEBUG: true
+[m[32m2018-01-03 14:18:32.725 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    
+]
+[m[32m2018-01-03 14:18:54.362 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: [
+    {
+        "id": 1,
+        "name": "ADMIN"
+    }
+]
+[m[32m2018-01-03 14:19:17.216 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 2
+[m[32m2018-01-03 14:19:17.238 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 2,
+    "username": "iskys",
+    "password": "-2rf1bip1o5ol",
+    "email": "iskys2k@gmail.com",
+    "nom": "Iskyrou",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97147563"
+}
+[m[32m2018-01-03 14:19:17.639 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 2
+[m[32m2018-01-03 14:19:17.641 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "timestamp": 1514985557635,
+    "status": 500,
+    "error": "Internal Server Error",
+    "exception": "java.lang.IndexOutOfBoundsException",
+    "message": "Index: 0, Size: 0",
+    "path": "/user/users/2/roles/0"
+}
+[m[32m2018-01-03 14:19:17.715 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 2
+[m[32m2018-01-03 14:19:17.716 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    
+]
+[m[32m2018-01-03 14:19:17.827 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 2
+[m[32m2018-01-03 14:19:17.832 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 2,
+    "username": "itbrain",
+    "password": "pass",
+    "email": "hibrahimyya@gmail.com",
+    "nom": "Barriath Rahimi",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97950121"
+}
+[m[32m2018-01-03 14:19:17.878 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 2,
+    "username": "iskys",
+    "password": "-2rf1bip1o5ol",
+    "email": "iskys2k@gmail.com",
+    "nom": "Iskyrou",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97147563"
+}
+[m[32m2018-01-03 14:19:17.923 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    {
+        "id": 2,
+        "username": "iskys",
+        "password": "-2rf1bip1o5ol",
+        "email": "iskys2k@gmail.com",
+        "nom": "Iskyrou",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "reset": false,
+        "userRoles": [
+            
+        ],
+        "numero": "97147563"
+    }
+]
+[m[32m2018-01-03 14:19:17.969 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 2
+[m[32m2018-01-03 14:19:17.971 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 2,
+    "username": "itbrain",
+    "password": "pass",
+    "nom": "Barriath Rahimi",
+    "email": "hibrahimyya@gmail.com",
+    "numero": "97950121",
+    "roles": null
+}
+[m[32m2018-01-03 14:19:18.050 WAT [main] c.b.UserControllerIntegrationTest DEBUG: true
+[m[32m2018-01-03 14:20:02.592 WAT [main] c.b.RoleControllerIntegrationTest DEBUG: true
+[m[32m2018-01-03 14:20:14.763 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 3
+[m[32m2018-01-03 14:20:14.779 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 3,
+    "username": "iskys",
+    "password": "-1ujkal46vnocp",
+    "email": "iskys2k@gmail.com",
+    "nom": "Iskyrou",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97147563"
+}
+[m[32m2018-01-03 14:20:14.897 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 3
+[m[32m2018-01-03 14:20:14.899 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 3,
+    "name": "ADMIN"
+}
+[m[32m2018-01-03 14:20:15.004 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 3
+[m[32m2018-01-03 14:20:15.006 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 3,
+    "username": "iskys",
+    "password": "-1ujkal46vnocp",
+    "nom": "Iskyrou",
+    "email": "iskys2k@gmail.com",
+    "numero": "97147563",
+    "roles": [
+        
+    ]
+}
+[m[32m2018-01-03 14:20:15.053 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 3
+[m[32m2018-01-03 14:20:15.054 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    
+]
+[m[32m2018-01-03 14:20:15.171 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 3
+[m[32m2018-01-03 14:20:15.174 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 3,
+    "username": "itbrain",
+    "password": "pass",
+    "email": "hibrahimyya@gmail.com",
+    "nom": "Barriath Rahimi",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97950121"
+}
+[m[32m2018-01-03 14:20:15.214 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 3,
+    "username": "itbrain",
+    "password": "pass",
+    "email": "hibrahimyya@gmail.com",
+    "nom": "Barriath Rahimi",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "reset": false,
+    "userRoles": [
+        
+    ],
+    "numero": "97950121"
+}
+[m[32m2018-01-03 14:20:15.261 WAT [main] c.b.UserControllerIntegrationTest DEBUG: [
+    {
+        "id": 3,
+        "username": "iskys",
+        "password": "-1ujkal46vnocp",
+        "email": "iskys2k@gmail.com",
+        "nom": "Iskyrou",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "reset": false,
+        "userRoles": [
+            
+        ],
+        "numero": "97147563"
+    }
+]
+[m[32m2018-01-03 14:20:15.318 WAT [main] c.b.UserControllerIntegrationTest DEBUG: 3
+[m[32m2018-01-03 14:20:15.320 WAT [main] c.b.UserControllerIntegrationTest DEBUG: {
+    "id": 3,
+    "username": "itbrain",
+    "password": "pass",
+    "nom": "Barriath Rahimi",
+    "email": "hibrahimyya@gmail.com",
+    "numero": "97950121",
+    "roles": null
+}
+[m[32m2018-01-03 14:20:15.398 WAT [main] c.b.UserControllerIntegrationTest DEBUG: true
 [m
