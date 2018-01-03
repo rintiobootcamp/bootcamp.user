@@ -45,7 +45,7 @@ public class UserControllerIntegrationTest {
 
     @Test(priority = 0, groups = {"roleTest"})
     public void createUserTest() throws Exception{
-        UserWs userWs = loadDataPagUserFromJsonFile().get( 0 );
+        UserWs userWs = loadDataPagUserFromJsonFile().get( 1 );
         String createURI = BASE_URI+USER_PATH;
         Gson gson = new Gson();
         String roleData = gson.toJson( userWs );
@@ -181,7 +181,7 @@ public class UserControllerIntegrationTest {
         Assert.assertEquals(response.statusCode(), 200) ;
 
     }
-    @Test(priority = 8, groups = {"roleTest"})
+   // @Test(priority = 8, groups = {"roleTest"})
     public void deleteUserTest(){
         String deleteURI = BASE_URI+USER_PATH+"/"+userId;
         Response response = given()

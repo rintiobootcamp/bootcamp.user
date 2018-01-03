@@ -123,7 +123,8 @@ public class UserService {
         for (UserRole userRole : userRoles) {
             UserRoleCRUD.delete(userRole);
         }
-        return PagUserCRUD.delete(pagUser);
+        //return PagUserCRUD.delete(pagUser);
+        return true;
     }
 
     //get a user id and returns its roles
