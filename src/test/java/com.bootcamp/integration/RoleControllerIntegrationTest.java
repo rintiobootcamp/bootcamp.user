@@ -1,4 +1,4 @@
-package com.bootcamp;
+package com.bootcamp.integration;
 
 
 import com.bootcamp.commons.utils.GsonUtils;
@@ -17,7 +17,6 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.reflect.Type;
-import java.util.LinkedList;
 import java.util.List;
 
 import static com.jayway.restassured.RestAssured.given;

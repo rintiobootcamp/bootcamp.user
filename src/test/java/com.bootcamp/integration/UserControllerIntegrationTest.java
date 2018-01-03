@@ -1,4 +1,4 @@
-package com.bootcamp;
+package com.bootcamp.integration;
 
 
 import com.bootcamp.commons.utils.GsonUtils;
