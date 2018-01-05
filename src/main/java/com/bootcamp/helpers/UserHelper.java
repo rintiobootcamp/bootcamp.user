@@ -7,8 +7,6 @@ package com.bootcamp.helpers;
 
 import com.bootcamp.commons.models.Criteria;
 import com.bootcamp.commons.models.Criterias;
-import com.bootcamp.commons.ws.usecases.pivotone.RoleWs;
-import com.bootcamp.commons.ws.usecases.pivotone.UserWs;
 import com.bootcamp.crud.PagRoleCRUD;
 import com.bootcamp.crud.PagUserCRUD;
 import com.bootcamp.entities.PagRole;
@@ -31,6 +29,7 @@ public class UserHelper {
         userWs.setEmail(user.getEmail());
         userWs.setNumero(user.getNumero());
         userWs.setUsername(user.getUsername());
+        userWs.setReset(user.isReset());
         userWs.setPassword(user.getPassword());
         return userWs;
     }
@@ -43,9 +42,10 @@ public class UserHelper {
         pagUser.setUsername(userWs.getUsername());
         pagUser.setEmail(userWs.getEmail());
         pagUser.setNumero(userWs.getNumero());
+        pagUser.setReset(userWs.isReset());
         return pagUser;
     }
-    
+
     public RoleWs buildRoleWs(PagRole role) {
         RoleWs roleWs = new RoleWs();
         roleWs.setId(role.getId());

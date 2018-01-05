@@ -1,6 +1,6 @@
 package com.bootcamp.controllers;
 
-import com.bootcamp.commons.ws.usecases.pivotone.RoleWs;
+import com.bootcamp.helpers.RoleWs;
 import com.bootcamp.entities.PagRole;
 import com.bootcamp.services.RoleService;
 import com.bootcamp.version.ApiVersions;

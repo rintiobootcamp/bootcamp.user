@@ -1,7 +1,5 @@
 package com.bootcamp.services;
 
-import com.bootcamp.commons.ws.usecases.pivotone.RoleWs;
-import com.bootcamp.commons.ws.usecases.pivotone.UserWs;
 import com.bootcamp.crud.PagUserCRUD;
 import com.bootcamp.crud.PagRoleCRUD;
 import com.bootcamp.crud.UserRoleCRUD;
@@ -9,6 +7,8 @@ import com.bootcamp.entities.PagUser;
 import com.bootcamp.entities.PagRole;
 import com.bootcamp.entities.UserRole;
 import com.bootcamp.helpers.UserHelper;
+import com.bootcamp.helpers.UserWs;
+import com.bootcamp.helpers.RoleWs;
 import java.io.IOException;
 import org.springframework.stereotype.Component;
 
@@ -36,7 +36,7 @@ public class UserService {
     RoleService roleService = new RoleService();
     UserHelper userHelper = new UserHelper();
     
- /*   @Value("${platform.nom}")
+    @Value("${platform.nom}")
     private String plateformeName;
     
     @Value("${mail.signature}")
@@ -52,17 +52,17 @@ public class UserService {
     private String PASSWORD;
     
     @Value("${mail.host}")
-    private String host;*/
+    private String host;
     
 
     // create a user
-    public PagUser create(UserWs userWs) throws SQLException, MessagingException, IOException {
+    public UserWs create(UserWs userWs) throws SQLException, MessagingException, IOException {
         PagUser pagUser = userHelper.buildPagUser(userWs);
         pagUser.setPassword(passwordGenerator());
-//        pagUser.setReset(false);
+        pagUser.setReset(false);
         PagUserCRUD.create(pagUser);
         
-        /*String msg = "Bonjour "+pagUser.getUsername()+"\n\n"+
+        String msg = "Bonjour "+pagUser.getUsername()+"\n\n"+
                 "Bienvenu sur la plateforme de Veille Citoyenne.\n\n"+
                 "La creation de votre compte a ete un succes.\n" +
                 "Vos informations sont les suivantes : \n"+
@@ -77,32 +77,29 @@ public class UserService {
         
         String subject = "Creation de Compte sur "+plateformeName;
         
-        sendMail(msg, to, subject);*/
+        sendMail(msg, to, subject);
         
         userWs.setId(pagUser.getId());
 
-
-        userWs.setId(pagUser.getId());
-        if(userWs.getRoles()!=null)
         for (int i = 0; i<userWs.getRoles().size(); i++) {
             UserRole userRole = new UserRole();
             PagRole pagRole = userHelper.buildPagRole(userWs.getRoles().get(i));
+            PagRoleCRUD.create(pagRole);
             userWs.getRoles().get(i).setId(pagRole.getId());
+
             if (pagRole != null) {
                 userRole.setPagRole(pagRole);
                 userRole.setPagUser(pagUser);
                 UserRoleCRUD.create(userRole);
             }
-
         }
-        return pagUser;
+        return userWs;
     }
 
     //modify a user
-    public PagUser update(UserWs userWs) throws SQLException {
+    public UserWs update(UserWs userWs) throws SQLException {
         PagUser pagUser = userHelper.buildPagUser(userWs);
         PagUserCRUD.update(pagUser);
-        /*
         for (RoleWs role : userWs.getRoles()) {
             UserRole userRole = new UserRole();
             PagRole pagRole = userHelper.buildPagRole(role);
@@ -113,8 +110,8 @@ public class UserService {
                 userRole.setPagUser(pagUser);
                 UserRoleCRUD.update(userRole);
             }
-        }*/
-        return pagUser;
+        }
+        return userWs;
     }
 
     public Boolean delete(Integer userId) throws SQLException {
@@ -141,24 +138,24 @@ public class UserService {
     }
 
     // return a user with it id
-    public PagUser read(int idUser) throws SQLException {
+    public UserWs read(int idUser) throws SQLException {
         PagUser user = userHelper.readUser(idUser);
         UserWs userWs = userHelper.buildUserWs(user);
         userWs.setRoles(userHelper.buildRolesWsOfUser(user));
-        return user;
+        return userWs;
     }
 
     //return all users
-    public List<PagUser> read() throws SQLException {
+    public List<UserWs> read() throws SQLException {
         List<UserWs> userWss = new ArrayList<UserWs>();
         List<PagUser> users = userHelper.readAllUser();
 
-       /* for (PagUser user : users) {
+        for (PagUser user : users) {
             UserWs userWs = userHelper.buildUserWs(user);
             userWs.setRoles(userHelper.buildRolesWsOfUser(user));
             userWss.add(userWs);
-        }*/
-        return users;
+        }
+        return userWss;
     }
 
     // add a role to a user
@@ -169,7 +166,9 @@ public class UserService {
         UserRole userRole = new UserRole();
         userRole.setPagRole(role);
         userRole.setPagUser(pagUser);
-       // UserRoleCRUD.create(userRole);
+
+        UserRoleCRUD.create(userRole);
+        
         UserWs userWs = userHelper.buildUserWs(pagUser);
         userWs.setRoles(userHelper.buildRolesWsOfUser(pagUser));
         
@@ -198,9 +197,9 @@ public class UserService {
       return s36;
     }
     
-  /*  //password change
+    //password change
     public String changePassword(int id, String password) throws SQLException, MessagingException, IOException {
-        PagUser pagUser = read(id);
+        PagUser pagUser = userHelper.readUser(id);
         pagUser.setPassword(password);
         PagUserCRUD.update(pagUser);
         
@@ -262,7 +261,7 @@ public class UserService {
         } catch (MessagingException me) {
             me.printStackTrace();
         }
-    }*/
+    }
 
     
 }

@@ -2,7 +2,7 @@ package com.bootcamp.services;
 
 import com.bootcamp.commons.models.Criteria;
 import com.bootcamp.commons.models.Criterias;
-import com.bootcamp.commons.ws.usecases.pivotone.RoleWs;
+import com.bootcamp.helpers.RoleWs;
 import com.bootcamp.crud.PagRoleCRUD;
 import com.bootcamp.crud.UserRoleCRUD;
 import com.bootcamp.entities.PagRole;
