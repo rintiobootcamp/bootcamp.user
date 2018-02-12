@@ -35,7 +35,7 @@ import java.util.ArrayList;
 @ContextConfiguration(classes = {Application.class})
 @PrepareForTest(PagUserCRUD.class)
 @PowerMockRunnerDelegate(SpringRunner.class)
-public class UserServiceTest {
+public class TestUnitaireUser {
 
     @InjectMocks
     private UserService userService;
@@ -88,7 +88,6 @@ public class UserServiceTest {
 //        List<RoleWs> resultRoles = userService.getUserRoles(1);
 //        Assert.assertNotNull(resultRoles);
 //    }
-
     @Test
     public void getAllPagUser() throws Exception {
         List<UserWs> users = loadDataPagUserFromJsonFile();
