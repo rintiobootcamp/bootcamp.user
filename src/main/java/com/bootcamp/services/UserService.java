@@ -57,6 +57,8 @@ public class UserService {
 
     // create a user
     public UserWs create(UserWs userWs) throws SQLException, MessagingException, IOException {
+
+
         PagUser pagUser = userHelper.buildPagUser(userWs);
         pagUser.setPassword(passwordGenerator());
         pagUser.setReset(false);

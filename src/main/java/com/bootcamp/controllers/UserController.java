@@ -5,6 +5,7 @@ import com.bootcamp.helpers.UserWs;
 import com.bootcamp.entities.PagUser;
 import com.bootcamp.entities.PagRole;
 import com.bootcamp.entities.UserRole;
+import com.bootcamp.services.AuthentificationService;
 import com.bootcamp.services.UserService;
 import com.bootcamp.version.ApiVersions;
 import io.swagger.annotations.Api;
@@ -14,6 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -25,6 +27,7 @@ import javax.mail.MessagingException;
 
 /**
  * Created by darextossa on 12/17/17.
+ * Modified by bignon on 02/03/18
  */
 @CrossOrigin(origins = "*")
 @RestController("UserController")
@@ -35,16 +38,25 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    @Autowired
+    AuthentificationService authentificationService;
+
+    HttpStatus httpStatus = null;
+
     @RequestMapping(method = RequestMethod.POST)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Save a new user", notes = "Save a new user")
-    public ResponseEntity<UserWs> create(@RequestBody @Valid UserWs userws) throws SQLException, IOException, MessagingException {
+    public ResponseEntity<UserWs> create(@RequestBody @Valid UserWs userws, HttpServletRequest request) throws SQLException, IOException, MessagingException {
 
-        HttpStatus httpStatus = null;
+        String token = request.getHeader("Authorization");
+        try {
+            authentificationService.verifyToken(token);
+            userws = userService.create(userws);
+            httpStatus = HttpStatus.OK;
+        }catch(Exception e) {
+            httpStatus = HttpStatus.UNAUTHORIZED;
+        }
 
-        userws = userService.create(userws);
-
-        httpStatus = HttpStatus.OK;
 
         return new ResponseEntity<>(userws, httpStatus);
     }
@@ -52,13 +64,19 @@ public class UserController {
     @RequestMapping(method = RequestMethod.PUT)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "update a  user", notes = "update a  user")
-    public ResponseEntity<UserWs> update(@RequestBody @Valid UserWs user) throws SQLException, IOException {
+    public ResponseEntity<UserWs> update(@RequestBody @Valid UserWs user, HttpServletRequest request) throws SQLException, IOException {
 
-        user = userService.update(user);
-        HttpStatus httpStatus = null;
 
-        user = userService.update(user);
-        httpStatus = HttpStatus.OK;
+        String token = request.getHeader("Authorization");
+        try {
+            authentificationService.verifyToken(token);
+
+            user = userService.update(user);
+            httpStatus = HttpStatus.OK;
+        }catch(Exception e) {
+            httpStatus = HttpStatus.UNAUTHORIZED;
+        }
+
 
         return new ResponseEntity<>(user, httpStatus);
     }
@@ -66,12 +84,18 @@ public class UserController {
     @RequestMapping(method = RequestMethod.PUT ,value = "{id}/{newpassword}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "update a user password", notes = "update a user password")
-    public ResponseEntity<String> changePassword(@PathVariable(name="id") int id,@PathVariable(name="newpassword") String newpassword) throws SQLException, IOException, MessagingException {
+    public ResponseEntity<String> changePassword(@PathVariable(name="id") int id,@PathVariable(name="newpassword") String newpassword, HttpServletRequest request) throws SQLException, IOException, MessagingException {
+        String newpwd=null;
+        String token = request.getHeader("Authorization");
+        try {
+            authentificationService.verifyToken(token);
 
-        HttpStatus httpStatus = null;
+             newpwd = userService.changePassword(id, newpassword);
+            httpStatus = HttpStatus.OK;
+        }catch(Exception e) {
+            httpStatus = HttpStatus.UNAUTHORIZED;
+        }
 
-        String newpwd = userService.changePassword(id, newpassword);
-        httpStatus = HttpStatus.OK;
 
         return new ResponseEntity<>(newpwd, httpStatus);
     }
@@ -79,13 +103,18 @@ public class UserController {
     @RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Delete a user", notes = "Delete a user")
-    public ResponseEntity<Boolean> delete(@PathVariable(name = "id") int id) throws SQLException, IOException {
+    public ResponseEntity<Boolean> delete(@PathVariable(name = "id") int id, HttpServletRequest request) throws SQLException, IOException {
 
         Boolean status = null;
-        HttpStatus httpStatus = null;
+        String token = request.getHeader("Authorization");
+        try {
+            authentificationService.verifyToken(token);
 
-        status = userService.delete(id);
-        httpStatus = HttpStatus.OK;
+            status = userService.delete(id);
+            httpStatus = HttpStatus.OK;
+        }catch(Exception e) {
+            httpStatus = HttpStatus.UNAUTHORIZED;
+        }
 
         return new ResponseEntity<>(status, httpStatus);
     }
@@ -93,12 +122,17 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET)
     @ApiVersions({"1.0"})
     @ApiOperation(value = "List of user", notes = "List of user")
-    public ResponseEntity<List<UserWs>> read() throws SQLException {
+    public ResponseEntity<List<UserWs>> read( HttpServletRequest request) throws SQLException {
         List<UserWs> users = null;
-        HttpStatus httpStatus = null;
+        String token = request.getHeader("Authorization");
+        try {
+            authentificationService.verifyToken(token);
 
-        users = userService.read();
-        httpStatus = HttpStatus.OK;
+            users = userService.read();
+            httpStatus = HttpStatus.OK;
+        }catch(Exception e) {
+            httpStatus = HttpStatus.UNAUTHORIZED;
+        }
 
         return new ResponseEntity<>(users, httpStatus);
     }
@@ -106,13 +140,19 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Get a user with its id", notes = "Get a user with its id")
-    public ResponseEntity<UserWs> read(@PathVariable(name = "id") int id) throws SQLException {
+    public ResponseEntity<UserWs> read(@PathVariable(name = "id") int id, HttpServletRequest request) throws SQLException {
 
         UserWs userWs = null;
-        HttpStatus httpStatus = null;
+        String token = request.getHeader("Authorization");
+        try {
+            authentificationService.verifyToken(token);
 
-        userWs = userService.read(id);
-        httpStatus = HttpStatus.OK;
+            userWs = userService.read(id);
+            httpStatus = HttpStatus.OK;
+        }catch(Exception e) {
+            httpStatus = HttpStatus.UNAUTHORIZED;
+        }
+
 
         return new ResponseEntity<>(userWs, httpStatus);
     }
@@ -120,12 +160,19 @@ public class UserController {
     @RequestMapping(method = RequestMethod.POST, value = "/addPagRole/{idUser}/{idRole}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "add a role to a user", notes = "add a role to a user")
-    public ResponseEntity<UserWs> setRoleToUser(@PathVariable(name = "idUser") int idUser, @PathVariable(name = "idRole") int idRole) throws SQLException, IOException {
+    public ResponseEntity<UserWs> setRoleToUser(@PathVariable(name = "idUser") int idUser, @PathVariable(name = "idRole") int idRole, HttpServletRequest request) throws SQLException, IOException {
         UserWs user = null;
-        HttpStatus httpStatus = null;
+        String token = request.getHeader("Authorization");
+        try {
+            authentificationService.verifyToken(token);
 
-        user = userService.setRoleToUser(idUser, idRole);
-        httpStatus = HttpStatus.OK;
+            user = userService.setRoleToUser(idUser, idRole);
+            httpStatus = HttpStatus.OK;
+        }catch(Exception e) {
+            httpStatus = HttpStatus.UNAUTHORIZED;
+        }
+
+
 
         return new ResponseEntity<>(user, httpStatus);
     }
@@ -133,13 +180,20 @@ public class UserController {
     @RequestMapping(method = RequestMethod.DELETE, value = "/deletePagRole/{idUser}/{idRole}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "delete a role from a user", notes = "delete a role from a user")
-    public ResponseEntity<UserWs> deleteRoleFromUser(@PathVariable(name = "idUser") int idUser, @PathVariable(name = "idRole") int idRole) throws SQLException, IOException {
+    public ResponseEntity<UserWs> deleteRoleFromUser(@PathVariable(name = "idUser") int idUser, @PathVariable(name = "idRole") int idRole, HttpServletRequest request) throws SQLException, IOException {
         UserWs user = null;
 
-        HttpStatus httpStatus = null;
+        String token = request.getHeader("Authorization");
+        try {
+            authentificationService.verifyToken(token);
 
-        user = userService.deleteRoleFromUser(idUser, idRole);
-        httpStatus = HttpStatus.OK;
+            user = userService.deleteRoleFromUser(idUser, idRole);
+            httpStatus = HttpStatus.OK;
+
+        }catch(Exception e) {
+            httpStatus = HttpStatus.UNAUTHORIZED;
+        }
+
 
         return new ResponseEntity<>(user, httpStatus);
     }
@@ -147,14 +201,20 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET, value = "/roles/{idUser}")
     @ApiVersions({"1.0"})
     @ApiOperation(value = "get user's roles", notes = "get user's roles")
-    public ResponseEntity<List<RoleWs>> getUserRoles(@PathVariable(name = "idUser") int idUser) throws SQLException {
+    public ResponseEntity<List<RoleWs>> getUserRoles(@PathVariable(name = "idUser") int idUser, HttpServletRequest request) throws SQLException {
 
         List<RoleWs> roles = null;
 
-        HttpStatus httpStatus = null;
+        String token = request.getHeader("Authorization");
+        try {
+            authentificationService.verifyToken(token);
 
-        roles = userService.getUserRoles(idUser);
-        httpStatus = HttpStatus.OK;
+            roles = userService.getUserRoles(idUser);
+            httpStatus = HttpStatus.OK;
+
+        }catch(Exception e) {
+            httpStatus = HttpStatus.UNAUTHORIZED;
+        }
 
         return new ResponseEntity<>(roles, httpStatus);
     }

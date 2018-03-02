@@ -262,7 +262,14 @@
             <version>2.9.0</version>
             <scope>test</scope>
         </dependency>
-        
+
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.6.0</version>
+        </dependency>
+
+
     </dependencies>
 
     <profiles>
