@@ -1,0 +1,13 @@
+bootcamp.user.iml
+/.git/
+/.idea/
+/build/
+/nbproject/
+/log/
+/logs/
+/target/
+*.iml
+/lib/
+nb-configuration.xml
+/src/main/resources/
+/src/test/resources/
