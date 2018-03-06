@@ -47,13 +47,16 @@ public class UserController {
     @ApiVersions({"1.0"})
     @ApiOperation(value = "Save a new user", notes = "Save a new user")
     public ResponseEntity<UserWs> create(@RequestBody @Valid UserWs userws, HttpServletRequest request) throws SQLException, IOException, MessagingException {
-
-        String token = request.getHeader("Authorization");
-        try {
-            authentificationService.verifyToken(token);
+        List<RoleWs> roleWs = userws.getRoles();
+        boolean admin = false ;
+        for (RoleWs role:roleWs) {
+            if (role.getName().equalsIgnoreCase("admin"))
+                admin=true;
+        }
+        if (admin){
             userws = userService.create(userws);
             httpStatus = HttpStatus.OK;
-        }catch(Exception e) {
+        }else {
             httpStatus = HttpStatus.UNAUTHORIZED;
         }
 
