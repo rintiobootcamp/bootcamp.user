@@ -43,11 +43,6 @@
             <!--<groupId>org.springframework.cloud</groupId>-->
             <!--<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
         <!--</dependency>-->
-        <dependency>
-            <groupId>io.sentry</groupId>
-            <artifactId>sentry-log4j2</artifactId>
-            <version>1.6.3</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
@@ -224,6 +219,10 @@
                     <groupId>com.bootcamp</groupId>
                     <artifactId>db-access</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         
@@ -235,6 +234,10 @@
                 <exclusion>
                     <groupId>com.bootcamp</groupId>
                     <artifactId>commons</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
